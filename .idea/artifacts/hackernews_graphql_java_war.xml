@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="hackernews-graphql-java.war">
+    <root id="archive" name="Comp373-Facility-Management-System.war">
       <element id="artifact" artifact-name="hackernews-graphql-java:war exploded" />
     </root>
   </artifact>
