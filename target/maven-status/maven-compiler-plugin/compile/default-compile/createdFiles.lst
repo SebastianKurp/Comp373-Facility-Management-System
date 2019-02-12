@@ -2,3 +2,4 @@ FMS/Query.class
 FMS/GraphQLEndpoint.class
 FMS/LinkRepository.class
 FMS/Link.class
+FMS/Mutation.class
