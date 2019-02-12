@@ -1,7 +1,9 @@
 # Comp373-Facility-Management-System
 
-Following this tutorial btw,
+Using this Tutorial As a Base
 https://www.howtographql.com/graphql-java/2-queries/
 
-To run pull the repo down and make sure you have maven installed
-Then run `mvn jetty:run`
+Installation:
+- Make sure that you have maven installed.
+- Once maven is installed, pull the repo 
+- To run cd into the project folder and then run `mvn jetty:run`
