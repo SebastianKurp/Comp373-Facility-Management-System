@@ -1,3 +1,6 @@
+
+import java.util.UUID;
+
 public class User {
     String id;
     int room;
@@ -6,5 +9,9 @@ public class User {
     String email;
     String name;
 
-    public void
+    public String createUserId( String id ){
+        UUID uuid=UUID.randomUUID();
+        String str=uuid.toString().replace("-", "");
+        return id = str;
+    }
 }
