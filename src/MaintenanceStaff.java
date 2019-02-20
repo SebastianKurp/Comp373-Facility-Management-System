@@ -7,9 +7,8 @@ public class MaintenanceStaff extends MaintenanceOffice{
     int currentTask;//equal to manReq id
 
 
-    public int addMaintRequest(){
-        MaintenanceRequest m1 = new MaintenanceRequest(99,"2/19/2019","","",false,null,0,id,0);
-        return m1.requestID;
+    public void addMaintRequest(){
+
     }
 
     public void removeMaintRequest(int requestId){

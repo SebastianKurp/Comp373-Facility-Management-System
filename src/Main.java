@@ -2,9 +2,10 @@ public class Main {
 
     public static void main(String[] args) {
         MaintenanceOffice MaintOff = new MaintenanceOffice();
-        MaintenanceStaff MaintStaff = new MaintenanceStaff();
-        MaintStaff.onDuty = true;
-        MaintStaff.currentTask = MaintStaff.addMaintRequest();
-        System.out.println(MaintStaff.currentTask);
+        MaintOff.addRequest("2/20/19",false,"This is a test",500);
+        MaintOff.getAllLogs();
+        MaintOff.getNumberOfRequests();
+
+
     }
 }
