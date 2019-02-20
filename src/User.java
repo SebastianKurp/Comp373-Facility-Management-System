@@ -9,9 +9,9 @@ public class User {
     String email;
     String name;
 
-    public String createUserId( String id ){
-        UUID uuid=UUID.randomUUID();
-        String str=uuid.toString().replace("-", "");
+    public String createUserId(String id) {
+        UUID uuid = UUID.randomUUID();
+        String str = uuid.toString().replace("-", "");
         return id = str;
     }
 }
