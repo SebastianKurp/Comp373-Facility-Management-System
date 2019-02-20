@@ -16,6 +16,15 @@ public class MaintenanceOffice {
         staffList.add(maintStaff);
     }
 
+    public MaintenanceStaff findMaintStaffById(int id){
+        for(MaintenanceStaff staff : staffList){
+            if(staff.id == id){
+                return staff;
+            }
+        }
+        return null;
+    }
+
     public void assignMaintStaff(MaintenanceRequest request, MaintenanceStaff staff){
         staff.setCurrentTask(request.id);
         request.setAssignedId(staff.id);
