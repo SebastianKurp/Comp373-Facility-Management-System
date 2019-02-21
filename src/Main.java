@@ -11,7 +11,7 @@ public class Main {
         //check gets
         MaintOff.getAllLogs();
         MaintOff.getNumberOfRequests();
-        MaintOff.getRequestsInProgress();
+        MaintOff.getNumberRequestsInProgress();
         MaintenanceRequest request = MaintOff.getSpecificLog(1);
         MaintOff.getSpecificLog(2);
 

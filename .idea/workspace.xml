@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1732f9f-6cb9-457c-afc0-ffe80394fb7b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/arquillianContainers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MaintenanceOfficeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MaintenanceRequestTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MaintenanceStaffTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FMS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FMS.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MaintenanceOffice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MaintenanceOffice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MaintenanceTest.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Staff.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state relative-caret-position="136">
+              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -29,31 +33,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MaintenanceRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+            <state relative-caret-position="170">
+              <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding>
-                <element signature="e#391#392#0" expanded="true" />
-                <element signature="e#410#411#0" expanded="true" />
-                <element signature="e#479#480#0" expanded="true" />
-                <element signature="e#509#510#0" expanded="true" />
-                <element signature="e#568#569#0" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-                <element signature="e#658#659#0" expanded="true" />
-                <element signature="e#690#691#0" expanded="true" />
-                <element signature="e#1126#1127#0" expanded="true" />
-                <element signature="e#1145#1146#0" expanded="true" />
-                <element signature="e#740#741#0" expanded="true" />
-                <element signature="e#771#772#0" expanded="true" />
+                <element signature="e#775#776#0" expanded="true" />
                 <element signature="e#807#808#0" expanded="true" />
-                <element signature="e#840#841#0" expanded="true" />
-                <element signature="e#880#881#0" expanded="true" />
-                <element signature="e#919#920#0" expanded="true" />
-                <element signature="e#960#961#0" expanded="true" />
-                <element signature="e#997#998#0" expanded="true" />
-                <element signature="e#1252#1253#0" expanded="true" />
+                <element signature="e#1247#1248#0" expanded="true" />
                 <element signature="e#1281#1282#0" expanded="true" />
-                <element signature="e#1450#1451#0" expanded="true" />
-                <element signature="e#1487#1488#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MaintenanceRequestTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="41">
+              <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,8 +60,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MaintenanceOffice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+            <state relative-caret-position="806">
+              <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MaintenanceOfficeTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="1" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MaintenanceStaffTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,22 +93,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MaintenanceStaff.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#380#381#0" expanded="true" />
-                <element signature="e#425#426#0" expanded="true" />
-                <element signature="e#481#482#0" expanded="true" />
-                <element signature="e#517#518#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            <state relative-caret-position="187">
+              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -105,6 +122,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Arquillian JUnit Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -123,8 +141,12 @@
         <option value="$PROJECT_DIR$/src/MaintenanceRequest.java" />
         <option value="$PROJECT_DIR$/src/MaintenanceTest.java" />
         <option value="$PROJECT_DIR$/src/Staff.java" />
-        <option value="$PROJECT_DIR$/src/MaintenanceOffice.java" />
+        <option value="$PROJECT_DIR$/src/MaintenanceOfficeTest1.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/MaintenanceOffice.java" />
+        <option value="$PROJECT_DIR$/src/MaintenanceStaffTest.java" />
+        <option value="$PROJECT_DIR$/src/MaintenanceOfficeTest.java" />
+        <option value="$PROJECT_DIR$/src/MaintenanceRequestTest.java" />
       </list>
     </option>
   </component>
@@ -139,6 +161,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,7 +178,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -166,9 +188,20 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550699454606" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550724679915" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -182,41 +215,51 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="FMS" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MaintenanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MaintenanceRequestTest">
+    <configuration name="MaintenanceRequestTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FMS" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MaintenanceTest" />
+      <option name="MAIN_CLASS_NAME" value="MaintenanceRequestTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaintenanceTest.testUniqueRequestId (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MaintenanceRequestTest.setDateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FMS" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MaintenanceTest" />
-      <option name="METHOD_NAME" value="testUniqueRequestId" />
+      <option name="MAIN_CLASS_NAME" value="MaintenanceRequestTest" />
+      <option name="METHOD_NAME" value="setDateTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaintenanceTest.testUniqueRequestId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MaintenanceRequestTest.toStringTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="FMS" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MaintenanceTest" />
-      <option name="METHOD_NAME" value="testUniqueRequestId(java.util.ArrayList)" />
+      <option name="MAIN_CLASS_NAME" value="MaintenanceRequestTest" />
+      <option name="METHOD_NAME" value="toStringTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaintenanceStaffTest.changeOnDutyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FMS" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MaintenanceStaffTest" />
+      <option name="METHOD_NAME" value="changeOnDutyTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaintenanceStaffTest.removeCurrentTaskTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="FMS" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MaintenanceStaffTest" />
+      <option name="METHOD_NAME" value="removeCurrentTaskTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -224,10 +267,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.MaintenanceTest.testUniqueRequestId (1)" />
-        <item itemvalue="JUnit.MaintenanceTest.testUniqueRequestId" />
-        <item itemvalue="JUnit.MaintenanceTest" />
+        <item itemvalue="JUnit.MaintenanceRequestTest" />
+        <item itemvalue="JUnit.MaintenanceRequestTest.setDateTest" />
+        <item itemvalue="JUnit.MaintenanceRequestTest.toStringTest" />
+        <item itemvalue="JUnit.MaintenanceStaffTest.changeOnDutyTest" />
+        <item itemvalue="JUnit.MaintenanceStaffTest.removeCurrentTaskTest" />
       </list>
     </recent_temporary>
   </component>
@@ -244,31 +288,52 @@
       <workItem from="1550541843399" duration="1418000" />
       <workItem from="1550607844060" duration="8493000" />
       <workItem from="1550685039468" duration="6558000" />
+      <workItem from="1550723028410" duration="1701000" />
+      <workItem from="1550724776082" duration="362000" />
+      <workItem from="1550725175396" duration="3247000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MaintenanceTest - 2019.02.20 at 13h 28m 32s.xml">
-      <configuration name="MaintenanceTest" configurationId="JUnit" />
+    <history-entry file="MaintenanceOfficeTest_getRequestsInProgressTest - 2019.02.21 at 13h 57m 24s.xml">
+      <configuration name="MaintenanceOfficeTest.getRequestsInProgressTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MaintenanceTest_testUniqueRequestId - 2019.02.20 at 15h 38m 20s.xml">
-      <configuration name="MaintenanceTest.testUniqueRequestId" configurationId="JUnit" />
+    <history-entry file="MaintenanceOfficeTest - 2019.02.21 at 13h 57m 41s.xml">
+      <configuration name="MaintenanceOfficeTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MaintenanceTest_testUniqueRequestId_(1) - 2019.02.20 at 15h 38m 42s.xml">
-      <configuration name="MaintenanceTest.testUniqueRequestId (1)" configurationId="JUnit" />
+    <history-entry file="MaintenanceStaffTest_setCurrentTaskTest - 2019.02.21 at 14h 04m 07s.xml">
+      <configuration name="MaintenanceStaffTest.setCurrentTaskTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MaintenanceTest_testUniqueRequestId_(1) - 2019.02.20 at 15h 42m 51s.xml">
-      <configuration name="MaintenanceTest.testUniqueRequestId (1)" configurationId="JUnit" />
+    <history-entry file="MaintenanceStaffTest_removeCurrentTaskTest - 2019.02.21 at 14h 05m 19s.xml">
+      <configuration name="MaintenanceStaffTest.removeCurrentTaskTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MaintenanceStaffTest_changeOnDutyTest - 2019.02.21 at 14h 06m 13s.xml">
+      <configuration name="MaintenanceStaffTest.changeOnDutyTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MaintenanceRequestTest_toStringTest - 2019.02.21 at 14h 14m 04s.xml">
+      <configuration name="MaintenanceRequestTest.toStringTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MaintenanceRequestTest_toStringTest - 2019.02.21 at 14h 14m 21s.xml">
+      <configuration name="MaintenanceRequestTest.toStringTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MaintenanceRequestTest_toStringTest - 2019.02.21 at 14h 14m 41s.xml">
+      <configuration name="MaintenanceRequestTest.toStringTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MaintenanceRequestTest_toStringTest - 2019.02.21 at 14h 15m 08s.xml">
+      <configuration name="MaintenanceRequestTest.toStringTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MaintenanceRequestTest_setDateTest - 2019.02.21 at 14h 16m 39s.xml">
+      <configuration name="MaintenanceRequestTest.setDateTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16469000" />
+    <option name="totallyTimeSpent" value="21891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12064777" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12550607" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -329,54 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Building.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MaintenanceRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#479#480#0" expanded="true" />
-            <element signature="e#509#510#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#658#659#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#1126#1127#0" expanded="true" />
-            <element signature="e#1145#1146#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#880#881#0" expanded="true" />
-            <element signature="e#919#920#0" expanded="true" />
-            <element signature="e#960#961#0" expanded="true" />
-            <element signature="e#997#998#0" expanded="true" />
-            <element signature="e#1252#1253#0" expanded="true" />
-            <element signature="e#1281#1282#0" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1487#1488#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MaintenanceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -384,38 +401,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Staff.java">
+    <entry file="file://$PROJECT_DIR$/src/MaintenanceTest.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/JUnit4.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="85">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MaintenanceStaff.java">
+    <entry file="file://$PROJECT_DIR$/src/Building.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#380#381#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#481#482#0" expanded="true" />
-            <element signature="e#517#518#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MaintenanceOffice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        <state relative-caret-position="68">
+          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="18" column="33" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+        <state relative-caret-position="187">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Staff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaintenanceOffice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="69" column="5" selection-start-line="69" selection-start-column="5" selection-end-line="69" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaintenanceStaff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaintenanceStaffTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaintenanceOfficeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaintenanceRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding>
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#1247#1248#0" expanded="true" />
+            <element signature="e#1281#1282#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MaintenanceRequestTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="41">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArquillianSettingsConfigurable.UI">
+        <settings>
+          <last-edited>GlassFish Embedded 3.1|Embedded</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
