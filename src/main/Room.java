@@ -1,3 +1,5 @@
+package main;
+
 public class Room {
     int roomNumber;
     String type;
