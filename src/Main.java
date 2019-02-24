@@ -2,6 +2,10 @@
 public class Main {
 
     public static void main(String[] args) {
+        Floor Floor = new Floor(1,5,false);
+        Floor.addRoomToFloor(1,10,"studio",1,750.00,false);
+        //Create floor with rooms
+
         UserRegistry  UserReg = new UserRegistry();
         //create falcity users
         UserReg.addUser(1,1,"64023213123123","zeus@gmail.com", "Zeus");;

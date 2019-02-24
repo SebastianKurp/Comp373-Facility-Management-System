@@ -15,4 +15,44 @@ public class User {
 
         System.out.println(String.format("%s, with %d, added to registry", name, id) );
     }
+
+    public void setUserId(int id){
+        this.id = id;
+    }
+
+    public void setUserRoom(int room){
+        this.room = room;
+    }
+
+    public void setUserPhonenumber(String phoneNumber){
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void setUserEmail(String email){
+        this.email = email;
+    }
+
+    public void setUserName(String name){
+        this.name = name;
+    }
+
+    public int getUserId(){
+        return this.id;
+    }
+
+    public int getUserRoom(){
+        return this.room;
+    }
+
+    public String getUserPhonenumber(){
+        return this.phoneNumber;
+    }
+
+    public String getUserEmail(){
+        return this.email;
+    }
+
+    public String getUserName(){
+        return this.name;
+    }
 }
