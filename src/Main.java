@@ -4,8 +4,7 @@ public class Main {
     public static void main(String[] args) {
         UserRegistry  UserReg = new UserRegistry();
         //create falcity users
-        UserReg.addUser(1,1,"64023213123123","zeus@gmail.com", "Zeus");
-        User.setUserRoom(4);
+        UserReg.addUser(1,1,"64023213123123","zeus@gmail.com", "Zeus");;
         UserReg.addUser(2,2,"64023213123323","hades@gmail.com", "Hades");
         UserReg.addUser(3,3,"64023213123223","posedion@gmail.com", "Posedion");
         MaintenanceOffice MaintOff = new MaintenanceOffice();

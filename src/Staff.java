@@ -12,4 +12,29 @@ public class Staff {
         this.onDuty = onDuty;
         this.isAdmin = isAdmin;
     }
+
+    public void addNewUser(){
+
+    }
+
+    public void removeUser(){
+
+    }
+
+    public void findUserById(){
+
+    }
+
+    public void findUserByName(){
+
+    }
+
+    public void findUserByRoom(){
+
+    }
+
+    public void getAllUsers(){
+
+    }
+
 }

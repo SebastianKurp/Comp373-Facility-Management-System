@@ -11,4 +11,12 @@ public class UserRegistry {
         User newUser = new User(id, room, phoneNumber, email, name);
         userList.add(newUser);
     }
+
+//    public UserRegistry findUserByName(String name) {
+//        for(User user : userList){
+//            if (user.name = name){
+//                return user;
+//            }
+//        }
+//    }
 }

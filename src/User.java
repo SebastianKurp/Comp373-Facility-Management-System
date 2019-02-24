@@ -15,10 +15,4 @@ public class User {
 
         System.out.println(String.format("%s, with %d, added to registry", name, id) );
     }
-
-    public void setUserRoom(int room){
-        this.room = room;
-
-        System.out.println("Room changed to %room");
-    }
 }
