@@ -1,8 +1,4 @@
-package main;
-
-import main.MaintenanceOffice;
-
-public class MaintenanceStaff extends MaintenanceOffice {
+public class MaintenanceStaff extends MaintenanceOffice{
     int id;
     boolean onDuty;
     int currentTask;//equal to manReq id

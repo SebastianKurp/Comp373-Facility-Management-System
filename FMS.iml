@@ -8,8 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-<<<<<<< HEAD
-=======
       <library name="JUnit5.3">
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.4.0/junit-jupiter-api-5.4.0.jar!/" />
@@ -22,7 +20,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
->>>>>>> 4ad752b4bc4aa3f4e0750007ce168d3c1ca4497f
       <library name="JUnit4">
         <CLASSES>
           <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/" />
@@ -32,9 +29,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-<<<<<<< HEAD
-=======
     <orderEntry type="library" name="Maven: Arquillian JUnit:Release" level="project" />
->>>>>>> 4ad752b4bc4aa3f4e0750007ce168d3c1ca4497f
   </component>
 </module>

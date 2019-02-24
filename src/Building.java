@@ -1,5 +1,3 @@
-package main;
-
 public class Building {
     String name;
     int numberOfRooms;
