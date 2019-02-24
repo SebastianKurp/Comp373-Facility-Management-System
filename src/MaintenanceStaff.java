@@ -16,6 +16,7 @@ public class MaintenanceStaff extends MaintenanceOffice{
     public void removeCurrentTask(){
         this.currentTask = -1;
     }
+
     public void changeOnDuty(){
         if(onDuty){
             this.onDuty = false;

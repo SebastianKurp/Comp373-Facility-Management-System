@@ -1,5 +1,5 @@
 public class User {
-    String id;
+    int id;
     int room;
     // String userNotes[];
     String phoneNumber;
@@ -12,6 +12,13 @@ public class User {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.name = name;
+
+        System.out.println(String.format("%s, with %d, added to registry", name, id) );
     }
 
+    public void setUserRoom(int room){
+        this.room = room;
+
+        System.out.println("Room changed to %room");
+    }
 }
