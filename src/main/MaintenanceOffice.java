@@ -18,7 +18,16 @@ public class MaintenanceOffice {
         staffList.add(maintStaff);
     }
 
-    public void assignMaintStaff(MaintenanceRequest request, MaintenanceStaff staff){
+    public MaintenanceStaff findMaintStaffById(int id){
+        for(MaintenanceStaff staff : staffList){
+            if(staff.id == id){
+                return staff;
+            }
+        }
+        return null;
+    }
+
+    public void assignMaintStaff(MaintenanceRequest request, MaintenanceStaff staff){//assign staff to request
         staff.setCurrentTask(request.id);
         request.setAssignedId(staff.id);
     }
@@ -40,7 +49,7 @@ public class MaintenanceOffice {
                 return request;
             }
         }
-        System.out.println("Null");
+        System.out.println("Log Not Found");
         return null;
     }
     public int getNumberOfRequests(){
@@ -48,17 +57,17 @@ public class MaintenanceOffice {
         for(MaintenanceRequest request : requestLog){
             count++;
         }
-        System.out.println(count);
+        System.out.println("There are " + count + " logs");
         return count;
     }
-    public int getRequestsInProgress() {
+    public int getNumberRequestsInProgress() {
         int count = 0;
         for (MaintenanceRequest request : requestLog) {
             if (request.inProgress == true) {
                 count++;
             }
         }
-        System.out.println(count);
+        System.out.println("There are " + count + " requests in progress");
         return count;
     }
 }
