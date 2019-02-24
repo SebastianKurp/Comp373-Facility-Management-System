@@ -5,7 +5,8 @@ public class Room {
     double cost;
     boolean inRepair;
 
-    public Room(int floorNumber, int roomNumber, String type, int capacity, double cost, boolean inRepair){
+
+    public Room(int roomNumber, String type, int capacity, double cost, boolean inRepair){
         this.roomNumber = roomNumber;
         this.type = type;
         this.capacity = capacity;
