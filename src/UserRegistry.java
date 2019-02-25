@@ -12,11 +12,14 @@ public class UserRegistry {
         userList.add(newUser);
     }
 
-//    public UserRegistry findUserByName(String name) {
-//        for(User user : userList){
-//            if (user.name = name){
-//                return user;
-//            }
-//        }
-//    }
+    public User findUserByName(String name) {
+        for(User user : userList){
+            if (user.name.equals(name)) {
+                return user;
+            }
+
+        }
+        System.out.println(String.format("User %s not found...", name));
+        return null;
+    }
 }
