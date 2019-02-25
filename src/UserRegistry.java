@@ -29,7 +29,39 @@ public class UserRegistry {
                 return user;
             }
         }
-        System.out.println(String.format("User %d not found", id));
+        System.out.println(String.format("User with id: %d not found", id));
+        return null;
+    }
+
+    public User findUserByRoom(int roomNumber){
+        for (User user : userList){
+            if(user.room == roomNumber) {
+                return user;
+            }
+        }
+        System.out.println(String.format("No User with roomnumber: %d found", roomNumber));
+        return null;
+    }
+
+    public User findUserByEmail(String email) {
+        for(User user : userList){
+            if (user.email.equals(email)) {
+                return user;
+            }
+
+        }
+        System.out.println(String.format("User with email: %s not found...", email));
+        return null;
+    }
+
+    public User findUserByPhoneNumber(String phonenumber) {
+        for(User user : userList){
+            if (user.phoneNumber.equals(phonenumber)) {
+                return user;
+            }
+
+        }
+        System.out.println(String.format("User with phonenumber: %s not found...", phonenumber));
         return null;
     }
 }
