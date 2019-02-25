@@ -9,7 +9,12 @@
 3. If not using Intelli J or another IDE, *not recommended*, `cd` into the `src` directory. Run `javac Main.java` to complie the project and then run `java Main` to run the demo.
 4. **To run all the test at once** right click the src in Intelli J and click `run all tests`
 
+### UML Diagram
+
+------------
+
+
 [![UML1](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/UML1.PNG?raw=true "UML1")](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/UML1.PNG?raw=true "UML1")
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
 ![java...](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/giphy.gif?raw=true)
