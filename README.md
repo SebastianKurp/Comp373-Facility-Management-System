@@ -1,4 +1,3 @@
-![ja](https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif)
 # Comp373-Facility-Management-System
 ## Team Members:
 - [Paul Narup](https://github.com/paulNarup "Paul Narup")
@@ -10,3 +9,6 @@
 3. If not using Intelli J or another IDE, not recommended, `cd` into the `src` directory. Run `javac Main.java` to complie the project and then run `java Main` to run the demo.
 
 ### Class List and Functions
+
+
+![ja](https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif)
