@@ -44,9 +44,6 @@ public class Main {
         MaintOff.assignMaintStaff(request,staff);
         MaintOff.getSpecificLog(1);
         MaintOff.getSpecificLog(2);
-        
-
-
 
     }
 }
