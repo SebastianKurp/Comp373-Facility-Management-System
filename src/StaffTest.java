@@ -53,9 +53,9 @@ public class StaffTest {
     }
 
     @Test
-    public void getIsAdimTest(){
+    public void getIsAdminTest(){
         Staff staff = new Staff( 12,"Doorman", true,false );
-        boolean isAdmin = staff.getOnDuty();
-        assertEquals(staff.onDuty, isAdmin);
+        boolean isAdmin = staff.getIsAdmin();
+        assertEquals(staff.isAdmin, isAdmin);
     }
 }
