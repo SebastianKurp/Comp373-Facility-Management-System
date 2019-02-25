@@ -64,4 +64,14 @@ public class UserRegistry {
         System.out.println(String.format("User with phonenumber: %s not found...", phonenumber));
         return null;
     }
+
+    public void printRooms(){
+        for(User user : userList){
+            System.out.println(String.format("== UUID # %d ==", user.id));
+            System.out.println(String.format("Name: %s", user.name));
+            System.out.println(String.format("Room: %d", user.room));
+            System.out.println(String.format("Email: %s", user.name));
+            System.out.println(String.format("PhoneNumber: %s", user.phoneNumber));
+        }
+    }
 }

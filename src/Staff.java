@@ -13,28 +13,35 @@ public class Staff {
         this.isAdmin = isAdmin;
     }
 
-    public void addNewUser(){
-
+    public void setStaffId(int id){
+        this.id = id;
     }
 
-    public void removeUser(){
-
+    public void setPostion(String postion){
+        this.postion = postion;
     }
 
-    public void findUserById(){
-
+    public void setOnDuty(boolean onDuty){
+        this.onDuty = onDuty;
     }
 
-    public void findUserByName(){
-
+    public void setIsAdmin(boolean isAdmin){
+        this.isAdmin = isAdmin;
     }
 
-    public void findUserByRoom(){
-
+    public int getStaffId(){
+        return this.id;
     }
 
-    public void getAllUsers(){
-
+    public String getPostion(){
+        return this.postion;
     }
 
+    public boolean getOnDuty(){
+        return this.onDuty;
+    }
+
+    public boolean getIsAdmin(){
+        return this.isAdmin;
+    }
 }

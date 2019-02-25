@@ -4,11 +4,6 @@ import static org.junit.Assert.*;
 public class RoomTest {
 
     @Test
-    public void RoomTest(){
-        Room room = new Room(1,"Studio", 2,750.00, false);
-    }
-
-    @Test
     public void getRoomNumberTest(){
         Room room = new Room(10,"studio",1,750.00,false);
         int roomNumber = room.getRoomNumber();
