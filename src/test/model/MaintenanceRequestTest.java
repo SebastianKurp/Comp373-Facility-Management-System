@@ -1,6 +1,6 @@
-package test.model.maintenance;
+package test.model;
 
-import main.client.maintenance.MaintenanceRequest;
+import main.model.maintenance.MaintenanceRequest;
 import org.junit.Assert;
 import org.junit.Test;
 

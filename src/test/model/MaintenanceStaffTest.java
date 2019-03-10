@@ -1,9 +1,9 @@
-package test.model.maintenance;
+package test.model;
 
-import main.client.maintenance.MaintenanceStaff;
-
+import main.model.maintenance.MaintenanceStaff;
+import org.junit.Assert;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
 
 public class MaintenanceStaffTest {
     @Test
@@ -11,22 +11,22 @@ public class MaintenanceStaffTest {
         MaintenanceStaff maintenanceStaff = new MaintenanceStaff(1,true,-1);
         int task = 100;
         maintenanceStaff.setCurrentTask(task);
-        assertEquals(task,maintenanceStaff.currentTask);
+        Assert.assertEquals(task,maintenanceStaff.currentTask);
     }
 
     @Test
     public void removeCurrentTaskTest(){
         MaintenanceStaff maintenanceStaff = new MaintenanceStaff(1,true,100);
         maintenanceStaff.removeCurrentTask();
-        assertEquals(maintenanceStaff.currentTask, -1);
+        Assert.assertEquals(maintenanceStaff.currentTask, -1);
     }
 
     @Test
     public void changeOnDutyTest(){
         MaintenanceStaff maintenanceStaff = new MaintenanceStaff(1,true,100);
         maintenanceStaff.changeOnDuty();
-        assertEquals(maintenanceStaff.onDuty,false);
+        Assert.assertEquals(maintenanceStaff.onDuty,false);
         maintenanceStaff.changeOnDuty();
-        assertEquals(maintenanceStaff.onDuty,true);
+        Assert.assertEquals(maintenanceStaff.onDuty,true);
     }
 }

@@ -1,5 +1,7 @@
 package main.client.maintenance;
 
+import main.model.maintenance.MaintenanceRequest;
+import main.model.maintenance.MaintenanceStaff;
 import java.util.ArrayList;
 
 public class MaintenanceOffice {

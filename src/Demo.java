@@ -1,8 +1,8 @@
 import main.client.maintenance.MaintenanceOffice;
-import main.client.maintenance.MaintenanceRequest;
-import main.client.maintenance.MaintenanceStaff;
+import main.model.maintenance.MaintenanceStaff;
+import main.model.maintenance.MaintenanceRequest;
 
-public class Main {
+public class Demo {
 
     public static void main(String[] args) {
         //Create floor with rooms

@@ -1,6 +1,6 @@
-package main.client.maintenance;
+package main.model.maintenance;
 
-public class MaintenanceRequest{
+public class MaintenanceRequest {
     public int id;
     public String date;
     public boolean inProgress;
@@ -65,4 +65,5 @@ public class MaintenanceRequest{
     public int getAssignedId(){
         return this.assignedId;
     }
+
 }
