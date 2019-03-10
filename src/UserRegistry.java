@@ -69,7 +69,7 @@ public class UserRegistry {
         for(User user : userList){
             System.out.println(String.format("== UUID # %d ==", user.id));
             System.out.println(String.format("Name: %s", user.name));
-            System.out.println(String.format("Room: %d", user.room));
+            System.out.println(String.format("main.model.facility.Room: %d", user.room));
             System.out.println(String.format("Email: %s", user.name));
             System.out.println(String.format("PhoneNumber: %s", user.phoneNumber));
         }

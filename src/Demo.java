@@ -1,3 +1,5 @@
+import main.client.building.Building;
+import main.client.building.FloorInterface;
 import main.client.maintenance.MaintenanceOffice;
 import main.model.maintenance.MaintenanceStaff;
 import main.model.maintenance.MaintenanceRequest;
@@ -5,18 +7,18 @@ import main.model.maintenance.MaintenanceRequest;
 public class Demo {
 
     public static void main(String[] args) {
-        //Create floor with rooms
-        Floor floor = new Floor(1,2,false,false);
-        floor.addRoomToFloor(10,"studio",1,750.00,false);
-        floor.addRoomToFloor(11,"double",2,1250.00,false);
-        floor.addRoomToFloor(12,"double",2,1250.00,false);
-        Floor floor1 = new Floor(2,2,false,false);
+        //Create floorInterface with rooms
+        FloorInterface floorInterface = new FloorInterface(1,2,false,false);
+        floorInterface.addRoomToFloor(10,"studio",1,750.00,false);
+        floorInterface.addRoomToFloor(11,"double",2,1250.00,false);
+        floorInterface.addRoomToFloor(12,"double",2,1250.00,false);
+        FloorInterface floorInterface1 = new FloorInterface(2,2,false,false);
 
 
-        //Create Building with floors
+        //Create main.client.building.Building with floors
         Building building = new Building("TestBuilding",4,0,"Tester");
-        building.addFloorToBuilding(floor);
-        building.addFloorToBuilding(floor1);
+        building.addFloorToBuilding(floorInterface);
+        building.addFloorToBuilding(floorInterface1);
 
         UserRegistry  UserReg = new UserRegistry();
         //create falcity users

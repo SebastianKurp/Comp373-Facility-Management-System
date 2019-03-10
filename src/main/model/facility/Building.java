@@ -1,11 +1,16 @@
+package main.model.facility;
+
+
+import main.model.facility.Floor;
+
 import java.util.ArrayList;
 
 public class Building {
-    ArrayList<Floor> floorList;
-    String name;
-    int numberOfRooms;
-    int numberOfVacantRooms;
-    String buildingNotes;
+    public ArrayList<Floor> floorList;
+    public String name;
+    public int numberOfRooms;
+    public int numberOfVacantRooms;
+    public String buildingNotes;
 
     public Building(String name,int numberOfRooms, int numberOfVacantRooms,String buildingNotes){
         this.name = name;
@@ -13,10 +18,6 @@ public class Building {
         this.numberOfVacantRooms = numberOfVacantRooms;
         this.buildingNotes = buildingNotes;
         this.floorList = new ArrayList<Floor>();
-    }
-
-    public void addFloorToBuilding(Floor floor){
-        floorList.add(floor);
     }
 
     public String getName() {

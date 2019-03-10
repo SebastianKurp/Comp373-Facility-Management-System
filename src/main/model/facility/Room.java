@@ -1,9 +1,11 @@
+package main.model.facility;
+
 public class Room {
-    int roomNumber;
-    String type;
-    int capacity;
-    double cost;
-    boolean inRepair;
+    public int roomNumber;
+    public String type;
+    public int capacity;
+    public double cost;
+    public boolean inRepair;
 
 
     public Room( int roomNumber, String type, int capacity, double cost, boolean inRepair){
@@ -13,8 +15,8 @@ public class Room {
         this.cost = cost;
         this.inRepair = inRepair;
 
-        System.out.println(String.format("==Room # %d ==", roomNumber));
-        System.out.println(String.format("Room Type: %s",type));
+        System.out.println(String.format("==main.model.facility.Room # %d ==", roomNumber));
+        System.out.println(String.format("main.model.facility.Room Type: %s",type));
         System.out.println(String.format("Capacity: %d",capacity));
         System.out.println(String.format("Cost Per Month: %f",cost));
         System.out.println(String.format("inRepair: %b", inRepair));

@@ -1,3 +1,6 @@
+package test.model;
+
+import main.model.facility.Room;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
