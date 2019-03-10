@@ -8,13 +8,13 @@ import static org.junit.Assert.*;
 
 public class FloorTest {
 
-    // @Test
-    // public void addRoomToFloor() {
-    // Floor floor = new Floor(1,2,false,false);
-    // int arraySize = floor.roomList.size();
-    // Floor.addRoomToFloor(10,"double",2,1250.00,false);
-    // assertEquals(arraySize, Floor.roomList.size() - 1);
-    // }
+     @Test
+     public void addRoomToFloor() {
+     Floor floor = new Floor(1,2,false,false);
+     int arraySize = floor.roomList.size();
+     floor.addRoomToFloor(10,"double",2,1250.00,false);
+     assertEquals(arraySize, floor.roomList.size() - 1);
+     }
 
     @Test
     public void getFloorNumber() {

@@ -17,6 +17,10 @@ public class Building {
         this.floorList = new ArrayList<Floor>();
     }
 
+    public void addFloorToBuilding(Floor floor){
+        floorList.add(floor);
+    }
+
     public String getName() {
         return name;
     }

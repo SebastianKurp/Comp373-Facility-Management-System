@@ -1,12 +1,23 @@
 package test.model;
 
 import main.model.facility.Building;
+import main.model.facility.Floor;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class BuildingTest {
 
+    @Test
+    public void addFloorToBuilding() {
+        Floor floor = new Floor(1,2,false,false);
+        Floor floor2 = new Floor(2,2,false,false);
+        Building building = new Building("TestBuilding",4,0,"None");
+        building.addFloorToBuilding(floor);
+        building.addFloorToBuilding(floor2);
+        int arraySize = building.floorList.size();
+        assertEquals(arraySize,2);
+    }
 
     @Test
     public void getName() {

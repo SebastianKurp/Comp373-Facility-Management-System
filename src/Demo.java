@@ -2,22 +2,24 @@ import main.client.maintenance.MaintenanceOffice;
 import main.model.maintenance.MaintenanceStaff;
 import main.model.maintenance.MaintenanceRequest;
 import main.model.user.UserRegistry;
+import main.model.facility.Floor;
+import main.model.facility.Building;
 
 public class Demo {
 
     public static void main(String[] args) {
-//        //Create floorInterface with rooms
-//        Floor floor = new Floor(1,2,false,false);
-//        floor.addRoomToFloor(10,"studio",1,750.00,false);
-//        floor.addRoomToFloor(11,"double",2,1250.00,false);
-//        floor.addRoomToFloor(12,"double",2,1250.00,false);
-//        Floor floor1 = new FloorInterface(2,2,false,false);
-//
-//
-//        //Create main.client.facility.Building with floors
-//        Building building = new Building("TestBuilding",4,0,"Tester");
-//        building.addFloorToBuilding(floor);
-//        building.addFloorToBuilding(floor1);
+        //Create floorInterface with rooms
+        Floor floor = new Floor(1,2,false,false);
+        floor.addRoomToFloor(10,"studio",1,750.00,false);
+        floor.addRoomToFloor(11,"double",2,1250.00,false);
+        floor.addRoomToFloor(12,"double",2,1250.00,false);
+        Floor floor1 = new Floor(2,2,false,false);
+
+
+        //Create main.client.facility.Building with floors
+        Building building = new Building("TestBuilding",4,0,"Tester");
+        building.addFloorToBuilding(floor);
+        building.addFloorToBuilding(floor1);
 
         UserRegistry UserReg = new UserRegistry();
         //create falcity users
