@@ -3,10 +3,10 @@ package maintenance;
 import java.util.ArrayList;
 
 public class MaintenanceOffice {
-    ArrayList<MaintenanceRequest> requestLog;
-    ArrayList<MaintenanceStaff> staffList;
-    int numCurrentRequests;
-    int numRequestsInProgress;
+    public ArrayList<MaintenanceRequest> requestLog;
+    public ArrayList<MaintenanceStaff> staffList;
+    public int numCurrentRequests;
+    public int numRequestsInProgress;
 
     public MaintenanceOffice(){
         this.requestLog = new ArrayList<MaintenanceRequest>();

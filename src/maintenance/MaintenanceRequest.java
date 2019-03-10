@@ -3,12 +3,12 @@ package maintenance;
 import java.util.ArrayList;
 
 public class MaintenanceRequest{
-    int id;
-    String date;
-    boolean inProgress;
-    String notes;
-    int estimateCost;
-    int assignedId;
+    public int id;
+    public String date;
+    public boolean inProgress;
+    public String notes;
+    public int estimateCost;
+    public int assignedId;
 
     public MaintenanceRequest(String date, boolean inProgress, String notes, int estimateCost, int id, int assignedId){
         this.inProgress = inProgress;

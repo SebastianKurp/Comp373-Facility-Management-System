@@ -3,9 +3,9 @@ package maintenance;
 import maintenance.MaintenanceOffice;
 
 public class MaintenanceStaff extends MaintenanceOffice {
-    int id;
-    boolean onDuty;
-    int currentTask;//equal to manReq id
+    public int id;
+    public boolean onDuty;
+    public int currentTask;//equal to manReq id
 
     public MaintenanceStaff(int id, boolean onDuty, int currentTask){
         this.id = id;

@@ -1,9 +1,12 @@
-package maintenance;
+package test;
 
 import maintenance.MaintenanceOffice;
+import maintenance.MaintenanceRequest;
+import maintenance.MaintenanceStaff;
 import org.junit.Assert;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class MaintenanceOfficeTest {
 
