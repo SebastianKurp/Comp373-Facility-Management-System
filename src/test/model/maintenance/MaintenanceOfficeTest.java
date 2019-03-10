@@ -1,8 +1,8 @@
-package test;
+package test.model.maintenance;
 
-import maintenance.MaintenanceOffice;
-import maintenance.MaintenanceRequest;
-import maintenance.MaintenanceStaff;
+import main.client.maintenance.MaintenanceOffice;
+import main.client.maintenance.MaintenanceRequest;
+import main.client.maintenance.MaintenanceStaff;
 import org.junit.Assert;
 import org.junit.Test;
 

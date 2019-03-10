@@ -1,6 +1,6 @@
-package test;
+package test.model.maintenance;
 
-import maintenance.MaintenanceStaff;
+import main.client.maintenance.MaintenanceStaff;
 
 import org.junit.Test;
 import static org.junit.Assert.*;

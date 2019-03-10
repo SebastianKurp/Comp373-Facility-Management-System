@@ -1,6 +1,4 @@
-package maintenance;
-
-import maintenance.MaintenanceOffice;
+package main.client.maintenance;
 
 public class MaintenanceStaff extends MaintenanceOffice {
     public int id;

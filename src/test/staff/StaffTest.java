@@ -1,4 +1,8 @@
+package test.staff;
+
 import org.junit.Test;
+import main.client.staff.Staff;
+
 import static org.junit.Assert.*;
 
 public class StaffTest {
@@ -45,17 +49,4 @@ public class StaffTest {
         assertEquals(staff.onDuty, onDuty);
     }
 
-    @Test
-    public void setIsAdminTest(){
-        Staff staff = new Staff( 12,"Doorman", true,false );
-        staff.setIsAdmin(false);
-        assertEquals(staff.isAdmin, false);
-    }
-
-    @Test
-    public void getIsAdminTest(){
-        Staff staff = new Staff( 12,"Doorman", true,false );
-        boolean isAdmin = staff.getIsAdmin();
-        assertEquals(staff.isAdmin, isAdmin);
-    }
 }

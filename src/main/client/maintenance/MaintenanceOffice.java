@@ -1,4 +1,4 @@
-package maintenance;
+package main.client.maintenance;
 
 import java.util.ArrayList;
 

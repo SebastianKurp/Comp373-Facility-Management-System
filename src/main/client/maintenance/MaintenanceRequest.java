@@ -1,6 +1,4 @@
-package maintenance;
-
-import java.util.ArrayList;
+package main.client.maintenance;
 
 public class MaintenanceRequest{
     public int id;

@@ -1,9 +1,8 @@
-package test;
+package test.model.maintenance;
 
-import maintenance.MaintenanceRequest;
+import main.client.maintenance.MaintenanceRequest;
 import org.junit.Assert;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 public class MaintenanceRequestTest {
     @Test

@@ -1,6 +1,6 @@
-import maintenance.MaintenanceOffice;
-import maintenance.MaintenanceRequest;
-import maintenance.MaintenanceStaff;
+import main.client.maintenance.MaintenanceOffice;
+import main.client.maintenance.MaintenanceRequest;
+import main.client.maintenance.MaintenanceStaff;
 
 public class Main {
 
@@ -25,7 +25,7 @@ public class Main {
         UserReg.addUser(3,3,"64023213123223","posedion@gmail.com", "Posedion");
         MaintenanceOffice MaintOff = new MaintenanceOffice();
 
-        //create maintenance requests
+        //create main.client.client.building.maintenance requests
         MaintOff.addRequest("2/20/19",false,"This is a test",500, 1,-1);
         MaintOff.addRequest("2/20/19",false,"test",500, 2,-1);
 
@@ -36,7 +36,7 @@ public class Main {
         MaintenanceRequest request = MaintOff.getSpecificLog(1);
         MaintOff.getSpecificLog(2);
 
-        //add maintenance staff
+        //add main.client.client.building.maintenance staff
         MaintOff.addStaff(1,true,-1);
         MaintenanceStaff staff = MaintOff.findMaintStaffById(1);
 

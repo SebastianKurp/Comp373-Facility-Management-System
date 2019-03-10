@@ -1,16 +1,14 @@
-import java.util.Arrays;
+package main.client.staff;
 
 public class Staff {
-    int id;
-    String postion;
-    boolean onDuty;
-    boolean isAdmin;
+    public int id;
+    public String postion;
+    public boolean onDuty;
 
     public Staff(int id, String postion, boolean onDuty, boolean isAdmin){
         this.id = id;
         this.postion = postion;
         this.onDuty = onDuty;
-        this.isAdmin = isAdmin;
     }
 
     public void setStaffId(int id){
@@ -25,10 +23,6 @@ public class Staff {
         this.onDuty = onDuty;
     }
 
-    public void setIsAdmin(boolean isAdmin){
-        this.isAdmin = isAdmin;
-    }
-
     public int getStaffId(){
         return this.id;
     }
@@ -41,7 +35,4 @@ public class Staff {
         return this.onDuty;
     }
 
-    public boolean getIsAdmin(){
-        return this.isAdmin;
-    }
 }
