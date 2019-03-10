@@ -1,3 +1,7 @@
+package maintenance;
+
+import maintenance.MaintenanceOffice;
+import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -26,8 +30,8 @@ public class MaintenanceOfficeTest {
         MaintenanceStaff maintenanceStaff = new MaintenanceStaff(1,true,-1);
         MaintenanceRequest maintenanceRequest = new MaintenanceRequest("2/20/19",false,"Test",500,10,-1);
         maintenanceOffice.assignMaintStaff(maintenanceRequest,maintenanceStaff);
-        assertEquals(maintenanceRequest.assignedId,maintenanceStaff.id);
-        assertEquals(maintenanceStaff.currentTask,maintenanceRequest.id);
+        Assert.assertEquals(maintenanceRequest.assignedId,maintenanceStaff.id);
+        Assert.assertEquals(maintenanceStaff.currentTask,maintenanceRequest.id);
     }
 
     @Test
@@ -45,10 +49,10 @@ public class MaintenanceOfficeTest {
         maintenanceOffice.addRequest("2/20/19",false,"test",500,1,-1);
         MaintenanceRequest requestFromLog = maintenanceOffice.requestLog.get(0);
         MaintenanceRequest requestFromId =maintenanceOffice.getSpecificLog(25);
-        assertEquals(requestFromId, requestFromLog);
+        Assert.assertEquals(requestFromId, requestFromLog);
         requestFromLog = maintenanceOffice.requestLog.get(1);
         requestFromId =maintenanceOffice.getSpecificLog(1);
-        assertEquals(requestFromId, requestFromLog);
+        Assert.assertEquals(requestFromId, requestFromLog);
     }
 
     @Test
