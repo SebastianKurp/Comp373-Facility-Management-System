@@ -1,7 +1,5 @@
 package test.model;
 
-import main.client.building.FloorInterface;
-
 import main.model.facility.Floor;
 
 import org.junit.Test;

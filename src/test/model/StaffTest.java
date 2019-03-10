@@ -1,7 +1,7 @@
-package test.staff;
+package test.model;
 
 import org.junit.Test;
-import main.client.staff.Staff;
+import main.model.staff.Staff;
 
 import static org.junit.Assert.*;
 

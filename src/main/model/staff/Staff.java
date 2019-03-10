@@ -1,4 +1,4 @@
-package main.client.staff;
+package main.model.staff;
 
 public class Staff {
     public int id;

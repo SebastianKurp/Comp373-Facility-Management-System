@@ -3,7 +3,7 @@ package main.model.facility;
 import java.util.ArrayList;
 
 public class Floor {
-    ArrayList<Room> roomList;
+    public ArrayList<Room> roomList;
 
     public int floorNumber;
     public int numberOfRooms;

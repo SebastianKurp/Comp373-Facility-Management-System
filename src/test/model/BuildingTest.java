@@ -1,6 +1,6 @@
 //package test.model;
 //
-//import main.client.building.Building;
+//import main.client.facility.Building;
 //import main.model.facility.Building;
 //import org.junit.Test;
 //
@@ -12,66 +12,66 @@
 //    public void addFloorToBuilding() {
 //        FloorInterface floorInterface = new FloorInterface(1,2,false,false);
 //        FloorInterface floorInterface2 = new FloorInterface(2,2,false,false);
-//        Building building = new Building("TestBuilding",4,0,"None");
-//        building.addFloorToBuilding(floorInterface);
-//        building.addFloorToBuilding(floorInterface2);
-//        int arraySize = building.floorInterfaceList.size();
+//        Building facility = new Building("TestBuilding",4,0,"None");
+//        facility.addFloorToBuilding(floorInterface);
+//        facility.addFloorToBuilding(floorInterface2);
+//        int arraySize = facility.floorInterfaceList.size();
 //        assertEquals(arraySize,2);
 //    }
 //
 //    @Test
 //    public void getName() {
-//        Building building = new Building("TestBuilding",4,0,"None");
-//        String name = building.getName();
-//        assertEquals(building.name,name);
+//        Building facility = new Building("TestBuilding",4,0,"None");
+//        String name = facility.getName();
+//        assertEquals(facility.name,name);
 //    }
 //
 //    @Test
 //    public void setName() {
-//        Building building = new Building("TestBuilding",4,0,"None");
-//        building.setName("Tester");
-//        assertEquals(building.name,"Tester");
+//        Building facility = new Building("TestBuilding",4,0,"None");
+//        facility.setName("Tester");
+//        assertEquals(facility.name,"Tester");
 //    }
 //
 //    @Test
 //    public void getNumberOfRooms() {
-//        Building building = new Building("TestBuilding",4,0,"None");
-//        int rooms = building.getNumberOfRooms();
-//        assertEquals(rooms,building.numberOfRooms);
+//        Building facility = new Building("TestBuilding",4,0,"None");
+//        int rooms = facility.getNumberOfRooms();
+//        assertEquals(rooms,facility.numberOfRooms);
 //    }
 //
 //    @Test
 //    public void setNumberOfRooms() {
-//        Building building = new Building("TestBuilding",4,0,"None");
-//        building.setNumberOfRooms(6);
-//        assertEquals(building.numberOfRooms,6);
+//        Building facility = new Building("TestBuilding",4,0,"None");
+//        facility.setNumberOfRooms(6);
+//        assertEquals(facility.numberOfRooms,6);
 //    }
 //
 //    @Test
 //    public void getNumberOfVacantRooms() {
-//        Building building = new Building("TestBuilding",4,0,"None");
-//        int vacant = building.getNumberOfVacantRooms();
-//        assertEquals(vacant,building.numberOfVacantRooms);
+//        Building facility = new Building("TestBuilding",4,0,"None");
+//        int vacant = facility.getNumberOfVacantRooms();
+//        assertEquals(vacant,facility.numberOfVacantRooms);
 //    }
 //
 //    @Test
 //    public void setNumberOfVacantRooms() {
-//        Building building = new Building("TestBuilding",4,0,"None");
-//        building.setNumberOfVacantRooms(1);
-//        assertEquals(building.numberOfVacantRooms,1);
+//        Building facility = new Building("TestBuilding",4,0,"None");
+//        facility.setNumberOfVacantRooms(1);
+//        assertEquals(facility.numberOfVacantRooms,1);
 //    }
 //
 //    @Test
 //    public void getBuildingNotes() {
-//        Building building = new Building("TestBuilding",4,0,"None");
-//        String notes = building.getBuildingNotes();
-//        assertEquals(notes,building.buildingNotes);
+//        Building facility = new Building("TestBuilding",4,0,"None");
+//        String notes = facility.getBuildingNotes();
+//        assertEquals(notes,facility.buildingNotes);
 //    }
 //
 //    @Test
 //    public void setBuildingNotes() {
-//        Building building = new Building("TestBuilding",4,0,"None");
-//        building.setBuildingNotes("Test");
-//        assertEquals(building.buildingNotes,"Test");
+//        Building facility = new Building("TestBuilding",4,0,"None");
+//        facility.setBuildingNotes("Test");
+//        assertEquals(facility.buildingNotes,"Test");
 //    }
 //}

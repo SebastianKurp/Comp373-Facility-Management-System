@@ -1,7 +1,6 @@
-package main.client.building;
+package main.client.facility;
 
 import main.model.facility.Room;
-import main.model.facility.Floor;
 
 import java.util.ArrayList;
 

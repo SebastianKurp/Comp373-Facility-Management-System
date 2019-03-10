@@ -1,5 +1,5 @@
-import main.client.building.Building;
-import main.client.building.FloorInterface;
+import main.client.facility.Building;
+import main.client.facility.FloorInterface;
 import main.client.maintenance.MaintenanceOffice;
 import main.model.maintenance.MaintenanceStaff;
 import main.model.maintenance.MaintenanceRequest;
@@ -15,7 +15,7 @@ public class Demo {
         FloorInterface floorInterface1 = new FloorInterface(2,2,false,false);
 
 
-        //Create main.client.building.Building with floors
+        //Create main.client.facility.Building with floors
         Building building = new Building("TestBuilding",4,0,"Tester");
         building.addFloorToBuilding(floorInterface);
         building.addFloorToBuilding(floorInterface1);
@@ -27,7 +27,7 @@ public class Demo {
         UserReg.addUser(3,3,"64023213123223","posedion@gmail.com", "Posedion");
         MaintenanceOffice MaintOff = new MaintenanceOffice();
 
-        //create main.client.client.building.maintenance requests
+        //create main.client.client.facility.maintenance requests
         MaintOff.addRequest("2/20/19",false,"This is a test",500, 1,-1);
         MaintOff.addRequest("2/20/19",false,"test",500, 2,-1);
 
@@ -38,7 +38,7 @@ public class Demo {
         MaintenanceRequest request = MaintOff.getSpecificLog(1);
         MaintOff.getSpecificLog(2);
 
-        //add main.client.client.building.maintenance staff
+        //add main.client.client.facility.maintenance staff
         MaintOff.addStaff(1,true,-1);
         MaintenanceStaff staff = MaintOff.findMaintStaffById(1);
 
