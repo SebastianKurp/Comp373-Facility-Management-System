@@ -1,7 +1,11 @@
+package main.model.user;
+
+import main.model.user.User;
+
 import java.util.ArrayList;
 
 public class UserRegistry {
-    ArrayList<User> userList;
+    public ArrayList<User> userList;
 
     public UserRegistry() {
         this.userList = new ArrayList<User>();
@@ -19,7 +23,7 @@ public class UserRegistry {
             }
 
         }
-        System.out.println(String.format("User %s not found...", name));
+        System.out.println(String.format("main.model.user.User %s not found...", name));
         return null;
     }
 
@@ -29,7 +33,7 @@ public class UserRegistry {
                 return user;
             }
         }
-        System.out.println(String.format("User with id: %d not found", id));
+        System.out.println(String.format("main.model.user.User with id: %d not found", id));
         return null;
     }
 
@@ -39,7 +43,7 @@ public class UserRegistry {
                 return user;
             }
         }
-        System.out.println(String.format("No User with roomnumber: %d found", roomNumber));
+        System.out.println(String.format("No main.model.user.User with roomnumber: %d found", roomNumber));
         return null;
     }
 
@@ -50,7 +54,7 @@ public class UserRegistry {
             }
 
         }
-        System.out.println(String.format("User with email: %s not found...", email));
+        System.out.println(String.format("main.model.user.User with email: %s not found...", email));
         return null;
     }
 
@@ -61,7 +65,7 @@ public class UserRegistry {
             }
 
         }
-        System.out.println(String.format("User with phonenumber: %s not found...", phonenumber));
+        System.out.println(String.format("main.model.user.User with phonenumber: %s not found...", phonenumber));
         return null;
     }
 

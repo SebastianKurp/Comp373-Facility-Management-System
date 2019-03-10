@@ -1,10 +1,11 @@
+package main.model.user;
+
 public class User {
-    int id;
-    int room;
-    // String userNotes[];
-    String phoneNumber;
-    String email;
-    String name;
+    public int id;
+    public int room;
+    public String phoneNumber;
+    public String email;
+    public String name;
 
     public User(int id, int room, String phoneNumber, String email, String name) {
         this.id = id;

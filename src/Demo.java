@@ -1,33 +1,32 @@
-import main.client.facility.Building;
-import main.client.facility.FloorInterface;
 import main.client.maintenance.MaintenanceOffice;
 import main.model.maintenance.MaintenanceStaff;
 import main.model.maintenance.MaintenanceRequest;
+import main.model.user.UserRegistry;
 
 public class Demo {
 
     public static void main(String[] args) {
-        //Create floorInterface with rooms
-        FloorInterface floorInterface = new FloorInterface(1,2,false,false);
-        floorInterface.addRoomToFloor(10,"studio",1,750.00,false);
-        floorInterface.addRoomToFloor(11,"double",2,1250.00,false);
-        floorInterface.addRoomToFloor(12,"double",2,1250.00,false);
-        FloorInterface floorInterface1 = new FloorInterface(2,2,false,false);
+//        //Create floorInterface with rooms
+//        Floor floor = new Floor(1,2,false,false);
+//        floor.addRoomToFloor(10,"studio",1,750.00,false);
+//        floor.addRoomToFloor(11,"double",2,1250.00,false);
+//        floor.addRoomToFloor(12,"double",2,1250.00,false);
+//        Floor floor1 = new FloorInterface(2,2,false,false);
+//
+//
+//        //Create main.client.facility.Building with floors
+//        Building building = new Building("TestBuilding",4,0,"Tester");
+//        building.addFloorToBuilding(floor);
+//        building.addFloorToBuilding(floor1);
 
-
-        //Create main.client.facility.Building with floors
-        Building building = new Building("TestBuilding",4,0,"Tester");
-        building.addFloorToBuilding(floorInterface);
-        building.addFloorToBuilding(floorInterface1);
-
-        UserRegistry  UserReg = new UserRegistry();
+        UserRegistry UserReg = new UserRegistry();
         //create falcity users
         UserReg.addUser(1,1,"64023213123123","zeus@gmail.com", "Zeus");;
         UserReg.addUser(2,2,"64023213123323","hades@gmail.com", "Hades");
         UserReg.addUser(3,3,"64023213123223","posedion@gmail.com", "Posedion");
         MaintenanceOffice MaintOff = new MaintenanceOffice();
 
-        //create main.client.client.facility.maintenance requests
+        //create requests
         MaintOff.addRequest("2/20/19",false,"This is a test",500, 1,-1);
         MaintOff.addRequest("2/20/19",false,"test",500, 2,-1);
 
@@ -38,7 +37,7 @@ public class Demo {
         MaintenanceRequest request = MaintOff.getSpecificLog(1);
         MaintOff.getSpecificLog(2);
 
-        //add main.client.client.facility.maintenance staff
+        //add staff
         MaintOff.addStaff(1,true,-1);
         MaintenanceStaff staff = MaintOff.findMaintStaffById(1);
 

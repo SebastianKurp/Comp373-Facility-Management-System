@@ -1,8 +1,5 @@
 package main.model.facility;
 
-
-import main.model.facility.Floor;
-
 import java.util.ArrayList;
 
 public class Building {
