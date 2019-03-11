@@ -8,6 +8,7 @@ import main.model.facility.Building;
 public class Demo {
 
     public static void main(String[] args) {
+        //swap to frontdeskoffice, adminoffice, maintenanceoffice, etc.
         //Create floorInterface with rooms
         Floor floor = new Floor(1,2,false,false);
         floor.addRoomToFloor(10,"studio",1,750.00,false);

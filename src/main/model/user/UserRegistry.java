@@ -23,7 +23,7 @@ public class UserRegistry {
             }
 
         }
-        System.out.println(String.format("main.model.user.User %s not found...", name));
+        System.out.println(String.format("=User %s not found...", name));
         return null;
     }
 
@@ -33,7 +33,7 @@ public class UserRegistry {
                 return user;
             }
         }
-        System.out.println(String.format("main.model.user.User with id: %d not found", id));
+        System.out.println(String.format("User with id: %d not found", id));
         return null;
     }
 
@@ -43,7 +43,7 @@ public class UserRegistry {
                 return user;
             }
         }
-        System.out.println(String.format("No main.model.user.User with roomnumber: %d found", roomNumber));
+        System.out.println(String.format("User with roomnumber: %d found", roomNumber));
         return null;
     }
 
@@ -54,7 +54,7 @@ public class UserRegistry {
             }
 
         }
-        System.out.println(String.format("main.model.user.User with email: %s not found...", email));
+        System.out.println(String.format("User with email: %s not found...", email));
         return null;
     }
 
@@ -65,7 +65,7 @@ public class UserRegistry {
             }
 
         }
-        System.out.println(String.format("main.model.user.User with phonenumber: %s not found...", phonenumber));
+        System.out.println(String.format("User with phonenumber: %s not found...", phonenumber));
         return null;
     }
 
@@ -73,7 +73,7 @@ public class UserRegistry {
         for(User user : userList){
             System.out.println(String.format("== UUID # %d ==", user.id));
             System.out.println(String.format("Name: %s", user.name));
-            System.out.println(String.format("main.model.facility.Room: %d", user.room));
+            System.out.println(String.format("Room: %d", user.room));
             System.out.println(String.format("Email: %s", user.name));
             System.out.println(String.format("PhoneNumber: %s", user.phoneNumber));
         }
