@@ -38,4 +38,8 @@ public class FrontDesk {
     public void printAllMail() {
         mailInventory.printAllMail();
     }
+
+    public void contactMaintenanceOffice(){
+        //Paul please do this one.
+    }
 }

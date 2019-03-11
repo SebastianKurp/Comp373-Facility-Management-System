@@ -1,0 +1,15 @@
+Paul mostly everything is done and I just need you to do the following:
+- Finish and add maintenance/user functions to the AdminDesk(Check if what I coded works)
+- Add User and Maintenance/User functions to FrontDesk(Check if what I coded works)
+- Add Maintenance to UserInterface
+- AdminOfficeTest
+- FrontDeskTest
+- UserInterfaceTest(If you don't want to do this one, just remove it in the client folder)
+
+-If all our tests work we can remove the demo if you want, but if you have a strong urge code you can code one out lol
+
+- When you're done just PM and I'll update the UML
+
+
+
+

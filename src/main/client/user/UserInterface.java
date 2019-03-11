@@ -1,10 +1,12 @@
 package main.client.user;
 
 public class UserInterface {
-    public void contactFrontDesk(){
+    public void contactMaintenanceOffice(){
 
     }
 
-    public void contactAdminOffice(){}
+    public void checkMaintenanceStatus(){
+
+    }
 
 }

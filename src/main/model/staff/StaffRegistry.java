@@ -32,4 +32,10 @@ public class StaffRegistry {
             System.out.println("No staff is onDuty at the moment");
         }
     }
+
+    public void printAllStaffList(){
+        for( Staff staff : staffList){
+            System.out.println(String.format("StaffMember with id %d is on duty", staff.id));
+        }
+    }
 }
