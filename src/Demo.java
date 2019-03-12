@@ -1,9 +1,10 @@
 import main.client.maintenance.MaintenanceOffice;
+import main.model.facility.*;
+import main.model.maintenance.MaintOff;
 import main.model.maintenance.MaintenanceStaff;
 import main.model.maintenance.MaintenanceRequest;
+import main.model.user.User;
 import main.model.user.UserRegistry;
-import main.model.facility.Floor;
-import main.model.facility.Building;
 
 public class Demo {
 
@@ -11,9 +12,10 @@ public class Demo {
         //swap to frontdeskoffice, adminoffice, maintenanceoffice, etc.
         //Create floorInterface with rooms
         Floor floor = new Floor(1,2,false,false);
-        floor.addRoomToFloor(10,"studio",1,750.00,false);
+        floor.addRoomToFloor(10,"studio",1,750.00,true);
         floor.addRoomToFloor(11,"double",2,1250.00,false);
         floor.addRoomToFloor(12,"double",2,1250.00,false);
+        floor.addRoomToFloor(55,"double",2,1250,true);
         Floor floor1 = new Floor(2,2,false,false);
 
 
@@ -24,30 +26,46 @@ public class Demo {
 
         UserRegistry UserReg = new UserRegistry();
         //create falcity users
-        UserReg.addUser(1,1,"64023213123123","zeus@gmail.com", "Zeus");;
-        UserReg.addUser(2,2,"64023213123323","hades@gmail.com", "Hades");
-        UserReg.addUser(3,3,"64023213123223","posedion@gmail.com", "Posedion");
-        MaintenanceOffice MaintOff = new MaintenanceOffice();
+        Room room = new Room(1,"Double",2,1500,false);
+        Room room2 = new Room(21,"Single",1,750,false);
+
+        UserReg.addUser(1,room,"64023213123123","zeus@gmail.com", "Zeus");;
+        UserReg.addUser(2,room,"64023213123323","hades@gmail.com", "Hades");
+        UserReg.addUser(3,room2,"64023213123223","posedion@gmail.com", "Posedion");
 
         //create requests
-        MaintOff.addRequest("2/20/19",false,"This is a test",500, 1,-1);
-        MaintOff.addRequest("2/20/19",false,"test",500, 2,-1);
+        MaintOff maintOff = new MaintOff();
+        maintOff.addRequest("2/20/19",false,"This is a test",500, 1,-1);
+        maintOff.addRequest("2/20/19",false,"test",500, 2,-1);
 
         //check gets
-        MaintOff.getAllLogs();
-        MaintOff.getNumberOfRequests();
-        MaintOff.getNumberRequestsInProgress();
-        MaintenanceRequest request = MaintOff.getSpecificLog(1);
-        MaintOff.getSpecificLog(2);
+        
+        maintOff.getAllLogs();
+        maintOff.getNumberOfRequests();
+        maintOff.getNumberRequestsInProgress();
+        MaintenanceRequest request = maintOff.getSpecificLog(1);
+        maintOff.getSpecificLog(2);
 
         //add staff
-        MaintOff.addStaff(1,true,-1);
-        MaintenanceStaff staff = MaintOff.findMaintStaffById(1);
+        maintOff.addStaff(1,true,-1);
+        MaintenanceStaff staff = maintOff.findMaintStaffById(1);
 
         //check assigning staff
-        MaintOff.assignMaintStaff(request,staff);
-        MaintOff.getSpecificLog(1);
-        MaintOff.getSpecificLog(2);
+        maintOff.assignMaintStaff(request,staff);
+        System.out.println(String.format("Staff id %d assigned to request %d",request.assignedId,request.id));
+        maintOff.getSpecificLog(1);
+        maintOff.getSpecificLog(2);
 
+        //check users
+        User user = new User(1,null,"99999999999","fake@gmail.com","John Doe");
+        Room vacantRoom = floor.getVacantRoom();
+        user.setUserRoom(vacantRoom);
+        System.out.println(String.format("User %s assigned to room %d",user.name,user.room.roomNumber));
+
+        //check mail
+        MailRoom mailRoom = new MailRoom();
+        Mail mail = new Mail(1,"package","2/20/19",user);
+        mailRoom.addMail(mail);
+        mailRoom.printAllMail();
     }
 }

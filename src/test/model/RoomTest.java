@@ -51,14 +51,14 @@ public class RoomTest {
     @Test
     public void setInRepairTest(){
         Room room = new Room(10,"studio",1,750.00,false);
-        room.setInRepair(false);
-        assertEquals(room.inRepair, false);
+        room.setVacant(false);
+        assertEquals(room.vacant, false);
     }
 
     @Test
     public void getInRepairTest(){
         Room room = new Room(10,"studio",1,750.00,false);
-        boolean repairStatus = room.getInRepair();
-        assertEquals(room.inRepair, false);
+        boolean repairStatus = room.getVacant();
+        assertEquals(room.vacant, false);
     }
 }

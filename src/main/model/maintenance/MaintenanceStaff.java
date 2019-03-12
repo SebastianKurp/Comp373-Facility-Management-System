@@ -2,10 +2,13 @@ package main.model.maintenance;
 
 import main.client.maintenance.MaintenanceOffice;
 
-public class MaintenanceStaff extends MaintenanceOffice {
+import java.util.ArrayList;
+
+public class MaintenanceStaff extends MaintOff implements MaintenanceOffice {
     public int id;
     public boolean onDuty;
     public int currentTask;//equal to manReq id
+
 
     public MaintenanceStaff(int id, boolean onDuty, int currentTask){
         this.id = id;
@@ -28,4 +31,7 @@ public class MaintenanceStaff extends MaintenanceOffice {
             this.onDuty = true;
         }
     }
+
+
+
 }

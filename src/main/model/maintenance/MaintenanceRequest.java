@@ -1,6 +1,11 @@
 package main.model.maintenance;
 
-public class MaintenanceRequest {
+import main.client.maintenance.MaintenanceOffice;
+import main.client.maintenance.MaintenanceRequestInterface;
+
+import java.util.ArrayList;
+
+public class MaintenanceRequest extends MaintOff implements MaintenanceRequestInterface {
     public int id;
     public String date;
     public boolean inProgress;
@@ -65,5 +70,6 @@ public class MaintenanceRequest {
     public int getAssignedId(){
         return this.assignedId;
     }
+
 
 }

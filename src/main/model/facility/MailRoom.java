@@ -1,20 +1,22 @@
 package main.model.facility;
 
+import main.client.facility.MailInterface;
+import main.model.user.User;
+
 import java.util.ArrayList;
 
-public class MailRoom {
+public class MailRoom implements MailInterface {
     public ArrayList<Mail> mailInvetory;
 
     public MailRoom() {
         this.mailInvetory = new ArrayList<Mail>();
     }
 
-    public void addMail(int roomNumber, String mailType, String dateOfArrival, String reciepent) {
-        Mail newMail = new Mail(roomNumber, mailType, dateOfArrival, reciepent);
+    public void addMail(Mail newMail) {
         mailInvetory.add(newMail);
     }
 
-    public Mail findMailByReciepent(String reciepent) {
+    public Mail findMailByReciepent(User reciepent) {
         for(Mail mail : mailInvetory){
             if (mail.reciepent.equals(reciepent)) {
                 return mail;
