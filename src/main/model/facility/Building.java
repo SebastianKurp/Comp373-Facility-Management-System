@@ -1,8 +1,10 @@
 package main.model.facility;
 
+import main.client.facility.BuildingInterface;
+
 import java.util.ArrayList;
 
-public class Building {
+public class Building implements BuildingInterface {
     public ArrayList<Floor> floorList;
     public String name;
     public int numberOfRooms;

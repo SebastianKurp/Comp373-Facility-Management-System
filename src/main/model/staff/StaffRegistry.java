@@ -1,8 +1,10 @@
 package main.model.staff;
 
+import main.client.facility.AdminInterface;
+
 import java.util.ArrayList;
 
-public class StaffRegistry {
+public class StaffRegistry implements AdminInterface {
     public ArrayList<Staff> staffList;
 
     public StaffRegistry(){

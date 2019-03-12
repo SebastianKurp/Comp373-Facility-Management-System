@@ -18,9 +18,9 @@ public class Floor {
         this.roomList = new ArrayList<Room>();
     }
 
-    public void addRoomToFloor(int roomNumber, String type, int capacity, double cost, boolean inRepair ){
+    public void addRoomToFloor(int roomNumber, String type, int capacity, double cost, boolean vacant ){
         if(roomList.size()<numberOfRooms) {
-            Room newRoom = new Room(roomNumber, type, capacity, cost, inRepair);
+            Room newRoom = new Room(roomNumber, type, capacity, cost, vacant);
             roomList.add(newRoom);
         }else{
             System.out.println("Too Many Rooms on this floor to add new room");
@@ -63,6 +63,16 @@ public class Floor {
         for(Room room : roomList){
             System.out.println(room.roomNumber);
         }
+    }
+
+    public Room getVacantRoom(){
+        for (Room room :roomList){
+            if(room.vacant){
+                return room;
+            }
+        }
+        System.out.println("No vacant rooms");
+        return null;
     }
 
 }

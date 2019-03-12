@@ -1,13 +1,19 @@
 package main.model.user;
 
-public class User {
+import main.client.user.UserInterface;
+import main.model.facility.Room;
+
+import java.util.ArrayList;
+
+public class User extends UserRegistry implements UserInterface {
+    public ArrayList<User> users;
     public int id;
-    public int room;
+    public Room room;
     public String phoneNumber;
     public String email;
     public String name;
 
-    public User(int id, int room, String phoneNumber, String email, String name) {
+    public User(int id, Room room, String phoneNumber, String email, String name) {
         this.id = id;
         this.room = room;
         this.phoneNumber = phoneNumber;
@@ -21,7 +27,7 @@ public class User {
         this.id = id;
     }
 
-    public void setUserRoom(int room){
+    public void setUserRoom(Room room){
         this.room = room;
     }
 
@@ -41,7 +47,7 @@ public class User {
         return this.id;
     }
 
-    public int getUserRoom(){
+    public Room getUserRoom(){
         return this.room;
     }
 
@@ -55,5 +61,32 @@ public class User {
 
     public String getUserName(){
         return this.name;
+    }
+
+    public User findUserByRoom(int roomNumber ){
+        for(User user:users){
+            if(user.room.roomNumber == roomNumber){
+                return user;
+            }
+        }
+        return null;
+    }
+    public User findUserByName(String name){
+        for(User user: users){
+            if(user.name == name){
+                return user;
+            }
+        }
+        return null;
+    }
+    public void printAllUsers(){
+        for (User user:users){
+            System.out.println(user.name);
+        }
+    }
+
+    public void addUser(int id, Room room, String phoneNumber, String email, String name){
+        User user = new User(id,room,phoneNumber,email,name);
+        users.add(user);
     }
 }

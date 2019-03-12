@@ -1,6 +1,8 @@
 package main.model.staff;
 
-public class Staff {
+import main.client.user.StaffInterface;
+
+public class Staff extends StaffRegistry implements StaffInterface {
     public int id;
     public String postion;
     public boolean onDuty;

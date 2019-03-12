@@ -1,5 +1,6 @@
 package main.model.user;
 
+import main.model.facility.Room;
 import main.model.user.User;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ public class UserRegistry {
         this.userList = new ArrayList<User>();
     }
 
-    public void addUser(int id, int room, String phoneNumber, String email, String name) {
+    public void addUser(int id, Room room, String phoneNumber, String email, String name) {
         User newUser = new User(id, room, phoneNumber, email, name);
         userList.add(newUser);
     }
@@ -39,7 +40,7 @@ public class UserRegistry {
 
     public User findUserByRoom(int roomNumber){
         for (User user : userList){
-            if(user.room == roomNumber) {
+            if(user.room.roomNumber == roomNumber) {
                 return user;
             }
         }

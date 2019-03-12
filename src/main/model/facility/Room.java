@@ -5,21 +5,21 @@ public class Room {
     public String type;
     public int capacity;
     public double cost;
-    public boolean inRepair;
+    public boolean vacant;
 
 
-    public Room( int roomNumber, String type, int capacity, double cost, boolean inRepair){
+    public Room( int roomNumber, String type, int capacity, double cost, boolean vacant){
         this.roomNumber = roomNumber;
         this.type = type;
         this.capacity = capacity;
         this.cost = cost;
-        this.inRepair = inRepair;
+        this.vacant = vacant;
 
         System.out.println(String.format("==main.model.facility.Room # %d ==", roomNumber));
         System.out.println(String.format("main.model.facility.Room Type: %s",type));
         System.out.println(String.format("Capacity: %d",capacity));
         System.out.println(String.format("Cost Per Month: %f",cost));
-        System.out.println(String.format("inRepair: %b", inRepair));
+        System.out.println(String.format("vacant: %b", vacant));
         System.out.println("=========");
     }
 
@@ -39,8 +39,8 @@ public class Room {
         this.cost = cost;
     }
 
-    public void setInRepair(boolean inRepair) {
-        this.inRepair = inRepair;
+    public void setVacant(boolean vacant) {
+        this.vacant = vacant;
     }
 
     public int getRoomNumber() {
@@ -59,7 +59,8 @@ public class Room {
         return  cost;
     }
 
-    public boolean getInRepair(){
-        return inRepair;
+    public boolean getVacant(){
+        return vacant;
     }
+
 }
