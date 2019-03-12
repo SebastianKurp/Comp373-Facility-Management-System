@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1097.5" y="834.0">main.client.facility.AdminInterface</node>
+    <node x="1057.0" y="1214.0">main.model.staff.Staff</node>
+    <node x="922.1624999999999" y="0.0">main.model.user.UserRegistry</node>
+    <node x="259.9749999999999" y="603.0">main.model.facility.Building</node>
+    <node x="125.25" y="33.5">main.model.facility.Room</node>
+    <node x="437.47499999999997" y="346.0">main.client.facility.BuildingInterface</node>
+    <node x="1188.1374999999998" y="615.0">main.model.facility.Mail</node>
+    <node x="1296.1625" y="56.0">main.client.facility.MailInterface</node>
+    <node x="716.4749999999999" y="279.0">main.model.user.User</node>
+    <node x="0.0" y="301.0">main.model.facility.Floor</node>
+    <node x="221.25" y="1281.0">main.model.maintenance.MaintOff</node>
+    <node x="426.5" y="856.5">main.client.maintenance.MaintenanceOffice</node>
+    <node x="-170.87239831360995" y="820.9456057525628">main.client.maintenance.MaintenanceRequestInterface</node>
+    <node x="927.5" y="1035.0">main.client.user.StaffInterface</node>
+    <node x="1296.1625" y="334.5">main.model.facility.MailRoom</node>
+    <node x="511.0" y="1045.5">main.model.maintenance.MaintenanceStaff</node>
+    <node x="548.1624999999999" y="56.0">main.client.user.UserInterface</node>
+    <node x="0.0" y="1024.0">main.model.maintenance.MaintenanceRequest</node>
+    <node x="1097.5" y="1001.0">main.model.staff.StaffRegistry</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="main.model.facility.Mail" target="main.model.user.User">
+      <point x="-83.0" y="-81.0" />
+      <point x="1229.6374999999998" y="578.0" />
+      <point x="893.4749999999999" y="578.0" />
+      <point x="0.0" y="137.0" />
+    </edge>
+    <edge source="main.model.user.UserRegistry" target="main.model.user.User">
+      <point x="88.5" y="114.5" />
+      <point x="1187.6625" y="259.0" />
+      <point x="1026.225" y="259.0" />
+      <point x="132.75" y="-137.0" />
+    </edge>
+    <edge source="main.model.maintenance.MaintOff" target="main.model.maintenance.MaintenanceRequest">
+      <point x="-171.0" y="-137.0" />
+      <point x="278.25" y="1256.0" />
+      <point x="105.25" y="1256.0" />
+      <point x="-105.25" y="103.5" />
+    </edge>
+    <edge source="main.model.user.User" target="main.model.facility.Room">
+      <point x="-132.75" y="-137.0" />
+      <point x="760.7249999999999" y="259.0" />
+      <point x="357.0" y="259.0" />
+      <point x="77.25" y="81.0" />
+    </edge>
+    <edge source="main.model.facility.MailRoom" target="main.model.facility.Mail">
+      <point x="67.5" y="81.5" />
+      <point x="1498.6625" y="578.0" />
+      <point x="1395.6374999999998" y="578.0" />
+      <point x="83.0" y="-81.0" />
+    </edge>
+    <edge source="main.model.facility.Building" target="main.client.facility.BuildingInterface">
+      <point x="65.5" y="-93.0" />
+      <point x="456.4749999999999" y="578.0" />
+      <point x="566.9749999999999" y="578.0" />
+      <point x="0.0" y="70.0" />
+    </edge>
+    <edge source="main.model.facility.Mail" target="main.model.facility.MailRoom">
+      <point x="0.0" y="-81.0" />
+      <point x="1312.6374999999998" y="578.0" />
+      <point x="1363.6625" y="578.0" />
+      <point x="-67.5" y="81.5" />
+    </edge>
+    <edge source="main.model.staff.Staff" target="main.model.staff.StaffRegistry">
+      <point x="0.0" y="-59.0" />
+      <point x="-103.0" y="81.5" />
+    </edge>
+    <edge source="main.model.maintenance.MaintOff" target="main.model.maintenance.MaintenanceStaff">
+      <point x="57.0" y="-137.0" />
+      <point x="506.25" y="1256.0" />
+      <point x="582.75" y="1256.0" />
+      <point x="-71.75" y="82.0" />
+    </edge>
+    <edge source="main.model.facility.MailRoom" target="main.client.facility.MailInterface">
+      <point x="0.0" y="-81.5" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="main.model.facility.Floor" target="main.model.facility.Room">
+      <point x="0.0" y="-115.0" />
+      <point x="-77.25" y="81.0" />
+    </edge>
+    <edge source="main.model.maintenance.MaintenanceStaff" target="main.client.maintenance.MaintenanceOffice">
+      <point x="0.0" y="-82.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="main.model.staff.Staff" target="main.client.user.StaffInterface">
+      <point x="-95.66666666666674" y="-59.0" />
+      <point x="1104.8333333333333" y="1189.0" />
+      <point x="1002.5" y="1189.0" />
+      <point x="0.0" y="47.5" />
+    </edge>
+    <edge source="main.model.user.User" target="main.client.user.UserInterface">
+      <point x="-44.25" y="-137.0" />
+      <point x="849.2249999999999" y="249.0" />
+      <point x="725.1624999999999" y="249.0" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="main.model.user.User" target="main.model.user.UserRegistry">
+      <point x="44.25" y="-137.0" />
+      <point x="937.7249999999999" y="259.0" />
+      <point x="1010.6624999999999" y="259.0" />
+      <point x="-88.5" y="114.5" />
+    </edge>
+    <edge source="main.model.staff.StaffRegistry" target="main.model.staff.Staff">
+      <point x="103.0" y="81.5" />
+      <point x="1406.5" y="1189.0" />
+      <point x="1296.1666666666667" y="1189.0" />
+      <point x="95.66666666666674" y="-59.0" />
+    </edge>
+    <edge source="main.model.staff.StaffRegistry" target="main.client.facility.AdminInterface">
+      <point x="0.0" y="-81.5" />
+      <point x="0.0" y="58.5" />
+    </edge>
+    <edge source="main.model.maintenance.MaintenanceRequest" target="main.model.maintenance.MaintOff">
+      <point x="105.25" y="103.5" />
+      <point x="315.75" y="1256.0" />
+      <point x="392.25" y="1256.0" />
+      <point x="-57.0" y="-137.0" />
+    </edge>
+    <edge source="main.model.facility.Building" target="main.model.facility.Floor">
+      <point x="-65.5" y="-93.0" />
+      <point x="325.4749999999999" y="578.0" />
+      <point x="202.5" y="578.0" />
+      <point x="0.0" y="115.0" />
+    </edge>
+    <edge source="main.model.maintenance.MaintenanceRequest" target="main.client.maintenance.MaintenanceRequestInterface">
+      <point x="0.0" y="-103.5" />
+      <point x="0.0" y="70.0" />
+    </edge>
+    <edge source="main.model.maintenance.MaintenanceStaff" target="main.model.maintenance.MaintOff">
+      <point x="71.75" y="82.0" />
+      <point x="726.25" y="1256.0" />
+      <point x="620.25" y="1256.0" />
+      <point x="171.0" y="-137.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.38301279287482365" x="769.7030120487154" y="731.9331086523897" />
+  <SelectedNodes>
+    <node>main.model.maintenance.MaintenanceRequest</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
