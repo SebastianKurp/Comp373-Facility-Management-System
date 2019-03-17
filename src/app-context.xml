@@ -15,6 +15,45 @@
         <constructor-arg name="vacant" value="true"/>
     </bean>
 
+    <bean id = "floor" class = "main.model.facility.Floor" scope="prototype">
+        <constructor-arg name="floorNumber" type="int" value="${}" />
+        <constructor-arg name="inRepair" value="${}" />
+        <constructor-arg name="vacant" value="${}" />
+        <constructor-arg name="numberOfRooms" type="int" value="${}" />
+        <property name="roomList">
+            <list>
+                <ref bean="room" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id=" building" class="main.model.facility.Building" scope="prototype">
+        <constructor-arg name="name" value="${}" />
+        <constructor-arg name="buildingNotes" value="${}" />
+        <constructor-arg name="numberOfRooms" type="int" value="${}" />
+        <constructor-arg name="numberOfVacantRooms" type="int" value="${}" />
+        <property name="floorList">
+            <list>
+                <ref bean="floor" />
+            </list>
+        </property>
+    </bean>
+    <bean id = "mail" class = "main.model.facility.Mail" scope="prototype">
+        <constructor-arg name="roomNumber" type="int" value="${}"/>
+        <constructor-arg name="mailType" value=""/>
+        <constructor-arg name="dateOfArrival" value="${}"/>
+        <constructor-arg name="reciepent" value="${}"/>
+    </bean>
+
+    <bean id = "mailRoom" class = "main.model.facility.MailRoom" scope="prototype">
+        <property name="mailInvetory">
+            <!--may have to swap to a list-->
+            <list>
+                <ref bean="mail" />
+            </list>
+        </property>
+    </bean>
+
     <bean id = "user" class = "main.model.user.User" scope="prototype">
         <constructor-arg name="id" type="int" value="${}"/>
         <constructor-arg name="room"  value=""/>
@@ -25,7 +64,7 @@
 
     <bean id="userRegistry" class="main.model.user.UserRegistry" scope="prototype">
         <property name="userList">
-            <!--need to figure out this part-->
+            <!--may have to swap to a list-->
             <list>
                 <ref bean="user" />
             </list>
@@ -62,6 +101,19 @@
         <constructor-arg name="id" type="int" value="${}"/>
         <constructor-arg name="onDuty" value="true" />
         <constructor-arg name="currentTask" type="int" value="${}"/>
+    </bean>
+
+    <bean id="maintOff" class="main.model.maintenance.MaintOff" scope="prototype">
+        <property name="maintenanceStaffList">
+            <list>
+                <ref bean="maintenanceStaff" />
+            </list>
+        </property>
+        <property name="requestLog">
+            <list>
+                <ref bean="maintenanceRequest" />
+            </list>
+        </property>
     </bean>
 
 

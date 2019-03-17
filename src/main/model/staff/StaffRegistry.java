@@ -3,8 +3,10 @@ package main.model.staff;
 import main.client.facility.AdminInterface;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class StaffRegistry implements AdminInterface {
+//    private List<Object> stafflist = new ArrayList<Staff>(20);
     public ArrayList<Staff> staffList;
 
     public StaffRegistry(){

@@ -20,5 +20,6 @@ Can be found either in the PDF or for a better rendering using a tool that can r
 //General Spring Setup
 http://www.springboottutorial.com/spring-boot-java-xml-context-configuration
 //For array list in spring below
+https://stackoverflow.com/questions/16633353/initializing-java-util-arraylist-using-spring-bean
 https://www.mkyong.com/spring/spring-collections-list-set-map-and-properties-example/
 https://www.pointerunits.com/2012/03/spring-arraylist-configuration-using.html
