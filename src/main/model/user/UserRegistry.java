@@ -6,7 +6,7 @@ import main.model.user.User;
 import java.util.ArrayList;
 
 public class UserRegistry {
-    public ArrayList<User> userList;
+    private ArrayList<User> userList;
 
     public UserRegistry() {
         this.userList = new ArrayList<User>();

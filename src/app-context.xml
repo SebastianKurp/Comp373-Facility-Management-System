@@ -23,11 +23,30 @@
         <constructor-arg name="name" value=""/>
     </bean>
 
+    <bean id="userRegistry" class="main.model.user.UserRegistry" scope="prototype">
+        <property name="userList">
+            <!--need to figure out this part-->
+            <list>
+                <ref bean="user" />
+            </list>
+        </property>
+    </bean>
+
+
     <bean id = "staff" class = "main.model.staff.Staff" scope="prototype">
         <constructor-arg name="id" type="int" value="${}"/>
         <constructor-arg name="postion" value=""/>
         <constructor-arg name="onDuty" value="true"/>
         <constructor-arg name="isAdmin" value="true"/>
+    </bean>
+
+    <bean id="staffRegistry" class="main.model.staff.StaffRegistry" scope="prototype">
+        <property name="staffList">
+            <!--need to figure out this part-->
+            <list>
+                <ref bean="staff" />
+            </list>
+        </property>
     </bean>
 
     <bean id = "maintenanceRequest" class = "main.model.maintenance.MaintenanceRequest" scope="prototype">
@@ -38,5 +57,12 @@
         <constructor-arg name="inProgress" value="true"/>
         <constructor-arg name="notes" value="true"/>
     </bean>
+
+    <bean id="maintenanceStaff" class="main.model.maintenance.MaintenanceStaff" scope="prototype">
+        <constructor-arg name="id" type="int" value="${}"/>
+        <constructor-arg name="onDuty" value="true" />
+        <constructor-arg name="currentTask" type="int" value="${}"/>
+    </bean>
+
 
 </beans>
