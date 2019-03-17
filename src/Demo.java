@@ -1,10 +1,12 @@
-import main.client.maintenance.MaintenanceOffice;
 import main.model.facility.*;
 import main.model.maintenance.MaintOff;
 import main.model.maintenance.MaintenanceStaff;
 import main.model.maintenance.MaintenanceRequest;
 import main.model.user.User;
 import main.model.user.UserRegistry;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class Demo {
 
