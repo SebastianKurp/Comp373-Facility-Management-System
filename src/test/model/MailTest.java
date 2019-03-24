@@ -33,11 +33,11 @@ public class MailTest {
     }
 
     @Test
-    public void setReciepentTest(){
+    public void setreciepientTest(){
         Mail m = new Mail(1, "package", "01-01-2019",user);
         User user = new User(1,null,"6366369999","fake@gmail.com","testUser2");
-        m.setReciepent(user);
-        assertEquals(user,m.reciepent);
+        m.setreciepient(user);
+        assertEquals(user,m.recipient);
     }
 
     @Test
@@ -62,9 +62,9 @@ public class MailTest {
     }
 
     @Test
-    public void getReciepentTest() {
+    public void getreciepientTest() {
         Mail m = new Mail(1, "package", "01-01-2019",user);
-        User user = m.getReciepent();
-        assertEquals(m.reciepent, user);
+        User user = m.getreciepient();
+        assertEquals(m.recipient, user);
     }
 }

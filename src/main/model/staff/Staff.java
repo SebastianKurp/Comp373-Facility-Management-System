@@ -4,12 +4,12 @@ import main.client.user.StaffInterface;
 
 public class Staff extends StaffRegistry implements StaffInterface {
     public int id;
-    public String postion;
+    public String position;
     public boolean onDuty;
 
-    public Staff(int id, String postion, boolean onDuty, boolean isAdmin){
+    public Staff(int id, String position, boolean onDuty, boolean isAdmin){
         this.id = id;
-        this.postion = postion;
+        this.position = position;
         this.onDuty = onDuty;
     }
 
@@ -17,8 +17,8 @@ public class Staff extends StaffRegistry implements StaffInterface {
         this.id = id;
     }
 
-    public void setPostion(String postion){
-        this.postion = postion;
+    public void setposition(String position){
+        this.position = position;
     }
 
     public void setOnDuty(boolean onDuty){
@@ -29,8 +29,8 @@ public class Staff extends StaffRegistry implements StaffInterface {
         return this.id;
     }
 
-    public String getPostion(){
-        return this.postion;
+    public String getposition(){
+        return this.position;
     }
 
     public boolean getOnDuty(){

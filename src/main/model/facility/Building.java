@@ -3,9 +3,10 @@ package main.model.facility;
 import main.client.facility.BuildingInterface;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Building implements BuildingInterface {
-    public ArrayList<Floor> floorList;
+    public List<Floor> floorList;
     public String name;
     public int numberOfRooms;
     public int numberOfVacantRooms;
@@ -53,5 +54,13 @@ public class Building implements BuildingInterface {
 
     public void setBuildingNotes(String buildingNotes) {
         this.buildingNotes = buildingNotes;
+    }
+
+    public List<Floor> getFloorList() {
+        return floorList;
+    }
+
+    public void setFloorList(List<Floor> floorList) {
+        this.floorList = floorList;
     }
 }

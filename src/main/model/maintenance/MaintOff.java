@@ -1,10 +1,11 @@
 package main.model.maintenance;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MaintOff {
-    public ArrayList<MaintenanceStaff> maintenanceStaffList;
-    public ArrayList<MaintenanceRequest> requestLog;
+    public List<MaintenanceStaff> maintenanceStaffList;
+    public List<MaintenanceRequest> requestLog;
     public MaintOff() {
         this.requestLog = new ArrayList<MaintenanceRequest>();
         this.maintenanceStaffList = new ArrayList<MaintenanceStaff>();
@@ -67,6 +68,20 @@ public class MaintOff {
         staff.setCurrentTask(request.id);
         request.setAssignedId(staff.id);
     }
+    public List<MaintenanceStaff> getMaintenanceStaffList() {
+        return maintenanceStaffList;
+    }
 
+    public void setMaintenanceStaffList(List<MaintenanceStaff> maintenanceStaffList) {
+        this.maintenanceStaffList = maintenanceStaffList;
+    }
+
+    public List<MaintenanceRequest> getRequestLog() {
+        return requestLog;
+    }
+
+    public void setRequestLog(List<MaintenanceRequest> requestLog) {
+        this.requestLog = requestLog;
+    }
 
 }
