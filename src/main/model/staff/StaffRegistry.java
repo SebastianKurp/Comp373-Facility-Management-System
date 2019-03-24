@@ -7,14 +7,14 @@ import java.util.List;
 
 public class StaffRegistry implements AdminInterface {
 //    private List<Object> stafflist = new ArrayList<Staff>(20);
-    public ArrayList<Staff> staffList;
+    public List<Staff> staffList;
 
     public StaffRegistry(){
         this.staffList = new ArrayList<Staff>();
     }
 
-    public void addNewStaffMember(int id, String postion, boolean onDuty, boolean isAdmin){
-        Staff newStaff = new Staff( id, postion, onDuty, isAdmin);
+    public void addNewStaffMember(int id, String position, boolean onDuty, boolean isAdmin){
+        Staff newStaff = new Staff( id, position, onDuty, isAdmin);
         staffList.add(newStaff);
     }
 
@@ -41,5 +41,13 @@ public class StaffRegistry implements AdminInterface {
         for( Staff staff : staffList){
             System.out.println(String.format("StaffMember with id %d is on duty", staff.id));
         }
+    }
+
+    public List<Staff> getStaffList() {
+        return staffList;
+    }
+
+    public void setStaffList(List<Staff> staffList) {
+        this.staffList = staffList;
     }
 }

@@ -4,9 +4,10 @@ import main.model.facility.Room;
 import main.model.user.User;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class UserRegistry {
-    private ArrayList<User> userList;
+    public List<User> userList;
 
     public UserRegistry() {
         this.userList = new ArrayList<User>();
@@ -78,5 +79,13 @@ public class UserRegistry {
             System.out.println(String.format("Email: %s", user.name));
             System.out.println(String.format("PhoneNumber: %s", user.phoneNumber));
         }
+    }
+
+    public List<User> getUserList() {
+        return userList;
+    }
+
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
     }
 }

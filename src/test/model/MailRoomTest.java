@@ -14,17 +14,17 @@ public class MailRoomTest {
     @Test
     public void addMailTest(){
         MailRoom mailRoom = new MailRoom();
-        int arraySize = mailRoom.mailInvetory.size();
+        int arraySize = mailRoom.mailInventory.size();
         Mail mail = new Mail(1,"package","2/20/19",user);
         mailRoom.addMail(mail);
-        assertEquals(arraySize,mailRoom.mailInvetory.size() - 1);
+        assertEquals(arraySize,mailRoom.mailInventory.size() - 1);
         Mail mail2 = new Mail(2,"package","2/20/19",user);
         mailRoom.addMail(mail2);
-        assertEquals(arraySize,mailRoom.mailInvetory.size() - 2);
+        assertEquals(arraySize,mailRoom.mailInventory.size() - 2);
     }
 
     @Test
-    public void findMailByReciepentTest(){
+    public void findMailByreciepientTest(){
         MailRoom mailRoom = new MailRoom();
         Mail mail = new Mail(1,"package","2/20/19",user);
         Mail mail2 = new Mail(2,"package","2/20/19",user1);
@@ -32,9 +32,9 @@ public class MailRoomTest {
 
         mailRoom.addMail(mail);
         mailRoom.addMail(mail2);
-        Mail reciepent = mailRoom.findMailByReciepent(user);
-        assertEquals(reciepent.reciepent,user);
-        Mail dontFindMail = mailRoom.findMailByReciepent(user2);
+        Mail reciepient = mailRoom.findMailByreciepient(user);
+        assertEquals(reciepient.recipient,user);
+        Mail dontFindMail = mailRoom.findMailByreciepient(user2);
         assertEquals(dontFindMail,null);
     }
 

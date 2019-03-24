@@ -1,9 +1,10 @@
 package main.model.facility;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Floor {
-    public ArrayList<Room> roomList;
+    public List<Room> roomList;
 
     public int floorNumber;
     public int numberOfRooms;
@@ -75,4 +76,11 @@ public class Floor {
         return null;
     }
 
+    public List<Room> getRoomList() {
+        return roomList;
+    }
+
+    public void setRoomList(List<Room> roomList) {
+        this.roomList = roomList;
+    }
 }

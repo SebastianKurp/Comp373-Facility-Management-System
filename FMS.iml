@@ -38,7 +38,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="Maven: Arquillian JUnit:Release" level="project" />
     <orderEntry type="library" name="spring-aop-5.1.5.RELEASE-javadoc" level="project" />
   </component>
 </module>

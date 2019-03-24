@@ -22,17 +22,17 @@ public class StaffTest {
     }
 
     @Test
-    public void setPostionTest(){
+    public void setpositionTest(){
         Staff staff = new Staff( 12,"Doorman", true,false );
-        staff.setPostion("Front-desk");
-        assertEquals(staff.postion, "Front-desk");
+        staff.setposition("Front-desk");
+        assertEquals(staff.position, "Front-desk");
     }
 
     @Test
-    public void getStaffPostionTest(){
+    public void getStaffpositionTest(){
         Staff staff = new Staff( 12,"Doorman", true,false );
-        String staffPostion = staff.getPostion();
-        assertEquals(staff.postion, staffPostion);
+        String staffposition = staff.getposition();
+        assertEquals(staff.position, staffposition);
     }
 
     @Test
