@@ -1,9 +1,6 @@
 package main.model.maintenance;
 
-import main.client.maintenance.MaintenanceOffice;
 import main.client.maintenance.MaintenanceRequestInterface;
-
-import java.util.ArrayList;
 
 public class MaintenanceRequest extends MaintOff implements MaintenanceRequestInterface {
     public int id;

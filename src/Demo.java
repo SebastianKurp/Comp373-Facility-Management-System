@@ -1,4 +1,3 @@
-import javafx.scene.layout.Region;
 import main.model.facility.*;
 import main.model.maintenance.MaintOff;
 import main.model.maintenance.MaintenanceStaff;
@@ -8,16 +7,11 @@ import main.model.user.UserRegistry;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 
 public class Demo {
     private static ApplicationContext context = new ClassPathXmlApplicationContext("app-context.xml");
 
     public static void main(String[] args) {
-
-
-
-        //swap to frontdeskoffice, adminoffice, maintenanceoffice, etc.
         //Create floorInterface with rooms
         Floor floor = (Floor) context.getBean("floor");
         floor.setFloorNumber(1);
