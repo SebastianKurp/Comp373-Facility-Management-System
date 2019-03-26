@@ -14,11 +14,11 @@ public class Mail extends MailRoom {
         this.dateOfArrival = dateOfArrival;
         this.recipient = recipient;
 
-        System.out.println(String.format("==Room # %d ==", roomNumber));
+        /*System.out.println(String.format("==Room # %d ==", roomNumber));
         System.out.println(String.format("recipient %s",recipient.name));
         System.out.println(String.format("Date of Arrival %s",dateOfArrival));
         System.out.println(String.format("Type of Mail %s",mailType));
-        System.out.println("=========");
+        System.out.println("=========");*/
     }
 
     public void setRoomNumber(int roomNumber){

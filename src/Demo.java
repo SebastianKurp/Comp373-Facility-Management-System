@@ -30,7 +30,7 @@ public class Demo {
 
 
         //Create main.client.facility.Building with floors
-        //Building building = new Building("TestBuilding",4,0,"Tester");
+
         Building building = (Building) context.getBean("building");
         building.setName("TestBuilding");
         building.setNumberOfRooms(4);
@@ -42,8 +42,7 @@ public class Demo {
         UserRegistry UserReg = new UserRegistry();
         //create falcity users
 
-        //Room room = new Room(1,"Double",2,1500,false);
-        //Room room2 = new Room(21,"Single",1,750,false);
+
         Room room = (Room) context.getBean("room");
         room.setRoomNumber(1);
         room.setType("Double");
@@ -57,14 +56,18 @@ public class Demo {
         room2.setCapacity(1);
         room2.setCost(750);
         room2.setVacant(false);
+
+        room.toString();
+        room2.toString();
+
         UserReg.addUser(1,room,"64023213123123","zeus@gmail.com", "Zeus");;
         UserReg.addUser(2,room,"64023213123323","hades@gmail.com", "Hades");
         UserReg.addUser(3,room2,"64023213123223","posedion@gmail.com", "Posedion");
 
         //create requests
         MaintOff maintOff = (MaintOff) context.getBean("maintOff");
-        maintOff.addRequest("2/20/19",false,"This is a test",500, 1,-1);
-        maintOff.addRequest("2/20/19",false,"test",500, 2,-1);
+        maintOff.addRequest("2/20/19",false,"This is a test",500, 1,-1,room);
+        maintOff.addRequest("2/20/19",false,"test",500, 2,-1,room2);
 
         //check gets
         
@@ -73,6 +76,9 @@ public class Demo {
         maintOff.getNumberRequestsInProgress();
         MaintenanceRequest request = maintOff.getSpecificLog(1);
         maintOff.getSpecificLog(2);
+        Room room5 = request.getRoom();
+
+
 
         //add staff
         maintOff.addStaff(1,true,-1);
@@ -86,7 +92,6 @@ public class Demo {
         maintOff.getSpecificLog(2);
 
         //check users
-        //User user = new User(1,null,"99999999999","fake@gmail.com","John Doe");
         User user = (User) context.getBean("user");
         user.setUserId(1);
         user.setUserRoom(null);
@@ -94,12 +99,12 @@ public class Demo {
         user.setUserEmail("fake@gmail.com");
         user.setUserName("John Doe");
 
+
         Room vacantRoom = floor.getVacantRoom();
         user.setUserRoom(vacantRoom);
         System.out.println(String.format("User %s assigned to room %d",user.name,user.room.roomNumber));
 
         //check mail
-        //MailRoom mailRoom = new MailRoom();
         MailRoom mailRoom = (MailRoom) context.getBean("mailRoom");
         Mail mail = new Mail(1,"package","2/20/19",user);
         mailRoom.addMail(mail);

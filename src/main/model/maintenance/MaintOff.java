@@ -1,5 +1,7 @@
 package main.model.maintenance;
 
+import main.model.facility.Room;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,8 +12,9 @@ public class MaintOff {
         this.requestLog = new ArrayList<MaintenanceRequest>();
         this.maintenanceStaffList = new ArrayList<MaintenanceStaff>();
     }
-    public void addRequest(String date, boolean inProgress, String notes, int estimateCost, int id, int assignedId) {
-        MaintenanceRequest maintenanceRequest = new MaintenanceRequest(date, inProgress, notes, estimateCost, id, assignedId);
+    public void addRequest(String date, boolean inProgress, String notes, int estimateCost, int id, int assignedId, Room room) {
+        MaintenanceRequest maintenanceRequest = new MaintenanceRequest(date, inProgress, notes, estimateCost,
+                id, assignedId, room);
         requestLog.add(maintenanceRequest);
     }
 

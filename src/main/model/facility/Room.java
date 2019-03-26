@@ -14,13 +14,16 @@ public class Room {
         this.capacity = capacity;
         this.cost = cost;
         this.vacant = vacant;
+    }
 
+    public String toString(){
         System.out.println(String.format("==main.model.facility.Room # %d ==", roomNumber));
         System.out.println(String.format("main.model.facility.Room Type: %s",type));
         System.out.println(String.format("Capacity: %d",capacity));
-        System.out.println(String.format("Cost Per Month: %f",cost));
+        System.out.println(String.format("Cost Per Month: %.2f",cost));
         System.out.println(String.format("vacant: %b", vacant));
         System.out.println("=========");
+        return "";
     }
 
     public void setRoomNumber(int roomNumber){

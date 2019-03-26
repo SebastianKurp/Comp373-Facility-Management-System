@@ -1,6 +1,7 @@
 package test.client;
 
 import main.client.maintenance.MaintenanceOffice;
+import main.model.facility.Room;
 import main.model.maintenance.MaintOff;
 import main.model.maintenance.MaintenanceRequest;
 import main.model.maintenance.MaintenanceStaff;
@@ -10,7 +11,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class MaintenanceOfficeTest {
-
+    Room room = new Room(1,"Double",2,1500,false);
     @Test
     public void addStaffTest() {
         MaintenanceStaff maintenanceStaff = new MaintenanceStaff(1,false,-1);
@@ -31,7 +32,8 @@ public class MaintenanceOfficeTest {
     @Test
     public void assignMaintStaffTest(){
         MaintenanceStaff maintenanceStaff = new MaintenanceStaff(1,true,-1);
-        MaintenanceRequest maintenanceRequest = new MaintenanceRequest("2/20/19",false,"Test",500,10,-1);
+        MaintenanceRequest maintenanceRequest = new MaintenanceRequest("2/20/19",false,"Test",500,
+                10,-1,room);
         maintenanceStaff.assignMaintStaff(maintenanceRequest,maintenanceStaff);
         Assert.assertEquals(maintenanceRequest.assignedId,maintenanceStaff.id);
         Assert.assertEquals(maintenanceStaff.currentTask,maintenanceRequest.id);
@@ -41,15 +43,15 @@ public class MaintenanceOfficeTest {
     public void addRequestTest(){
         MaintOff maintOff = new MaintOff();
         int arraySize = maintOff.requestLog.size();
-        maintOff.addRequest("2/20/19",false,"test",500,1,-1);
+        maintOff.addRequest("2/20/19",false,"test",500,1,-1,room);
         assertEquals(arraySize, maintOff.requestLog.size() - 1);
     }
 
     @Test
     public void getSpecificLogTest(){
         MaintOff maintOff = new MaintOff();
-        maintOff.addRequest("2/20/19",false,"Teser",100,25,57);
-        maintOff.addRequest("2/20/19",false,"test",500,1,-1);
+        maintOff.addRequest("2/20/19",false,"Teser",100,25,57,room);
+        maintOff.addRequest("2/20/19",false,"test",500,1,-1,room);
         MaintenanceRequest requestFromLog = maintOff.requestLog.get(0);
         MaintenanceRequest requestFromId =maintOff.getSpecificLog(25);
         assertEquals(requestFromId, requestFromLog);
@@ -61,8 +63,8 @@ public class MaintenanceOfficeTest {
     @Test
     public void getNumberOfRequestsTest(){
         MaintOff maintOff = new MaintOff();
-        maintOff.addRequest("2/20/19",false,"Teser",100,27,57);
-        maintOff.addRequest("2/20/19",false,"test",500,1,-1);
+        maintOff.addRequest("2/20/19",false,"Teser",100,27,57,room);
+        maintOff.addRequest("2/20/19",false,"test",500,1,-1,room);
         int requests = maintOff.getNumberOfRequests();
         assertEquals(requests,maintOff.requestLog.size());
     }
@@ -70,9 +72,9 @@ public class MaintenanceOfficeTest {
     @Test
     public void getRequestsInProgressTest(){
         MaintOff maintOff = new MaintOff();
-        maintOff.addRequest("2/20/19",true,"Teser",101,27,57);
-        maintOff.addRequest("2/20/19",false,"test",500,1,-1);
-        maintOff.addRequest("2/20/19",true,"test",500,55,101);
+        maintOff.addRequest("2/20/19",true,"Teser",101,27,57,room);
+        maintOff.addRequest("2/20/19",false,"test",500,1,-1,room);
+        maintOff.addRequest("2/20/19",true,"test",500,55,101,room);
         int requests = maintOff.getNumberRequestsInProgress();
         assertEquals(requests,2);
     }

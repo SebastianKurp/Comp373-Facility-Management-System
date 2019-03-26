@@ -20,12 +20,6 @@
         <constructor-arg name="vacant" value="false" />
         <constructor-arg name="numberOfRooms" type="int" value="0" />
         <constructor-arg name="floorNumber" type="int" value="0"/>
-
-        <property name="roomList">
-            <list>
-                <ref bean="room" />
-            </list>
-        </property>
     </bean>
 
     <bean id="building" class="main.model.facility.Building" scope="prototype">
@@ -33,11 +27,7 @@
         <constructor-arg name="buildingNotes" value="${}" />
         <constructor-arg name="numberOfRooms" type="int" value="0" />
         <constructor-arg name="numberOfVacantRooms" type="int" value="0" />
-        <property name="floorList">
-            <list>
-                <ref bean="floor" />
-            </list>
-        </property>
+
     </bean>
     <bean id = "mail" class = "main.model.facility.Mail" scope="prototype">
         <constructor-arg name="roomNumber" type="int" value="0"/>
@@ -46,13 +36,7 @@
         <constructor-arg name="recipient" ref="user"/>
     </bean>
 
-    <bean id = "mailRoom" class = "main.model.facility.MailRoom" scope="prototype">
-        <property name="mailInventory">
-            <list>
-                <ref bean="mail" />
-            </list>
-        </property>
-    </bean>
+    <bean id = "mailRoom" class = "main.model.facility.MailRoom" scope="prototype"/>
 
     <bean id = "user" class = "main.model.user.User" scope="prototype">
         <constructor-arg name="id" type="int" value="0"/>
@@ -62,14 +46,7 @@
         <constructor-arg name="name" value=""/>
     </bean>
 
-    <bean id="userRegistry" class="main.model.user.UserRegistry" scope="prototype">
-        <property name="userList">
-            <!--may have to swap to a list-->
-            <list>
-                <ref bean="user" />
-            </list>
-        </property>
-    </bean>
+    <bean id="userRegistry" class="main.model.user.UserRegistry" scope="prototype"/>
 
 
     <bean id = "staff" class = "main.model.staff.Staff" scope="prototype">
@@ -79,13 +56,9 @@
         <constructor-arg name="isAdmin" value="true"/>
     </bean>
 
-    <bean id="staffRegistry" class="main.model.staff.StaffRegistry" scope="prototype">
-        <property name="staffList">
-            <list>
-                <ref bean="staff" />
-            </list>
-        </property>
-    </bean>
+    <bean id="staffRegistry" class="main.model.staff.StaffRegistry" scope="prototype" />
+
+
 
     <bean id = "maintenanceRequest" class = "main.model.maintenance.MaintenanceRequest" scope="prototype">
         <constructor-arg name="id" type="int" value="0"/>
@@ -94,6 +67,7 @@
         <constructor-arg name="assignedId" type="int" value="0"/>
         <constructor-arg name="inProgress" value="true"/>
         <constructor-arg name="notes" value="true"/>
+        <constructor-arg name="room" ref="room"/>
     </bean>
 
     <bean id="maintenanceStaff" class="main.model.maintenance.MaintenanceStaff" scope="prototype">
@@ -102,18 +76,7 @@
         <constructor-arg name="currentTask" type="int" value="0"/>
     </bean>
 
-    <bean id="maintOff" class="main.model.maintenance.MaintOff" scope="prototype">
-        <property name="maintenanceStaffList">
-            <list>
-                <ref bean="maintenanceStaff" />
-            </list>
-        </property>
-        <property name="requestLog">
-            <list>
-                <ref bean="maintenanceRequest" />
-            </list>
-        </property>
-    </bean>
+    <bean id="maintOff" class="main.model.maintenance.MaintOff" scope="prototype" />
 
 
 </beans>

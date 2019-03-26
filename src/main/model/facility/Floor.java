@@ -16,7 +16,7 @@ public class Floor {
         this.numberOfRooms = numberOfRooms;
         this.vacant = vacant;
         this.inRepair = inRepair;
-        this.roomList = new ArrayList<Room>();
+        this.roomList = new ArrayList<>();
     }
 
     public void addRoomToFloor(int roomNumber, String type, int capacity, double cost, boolean vacant ){
