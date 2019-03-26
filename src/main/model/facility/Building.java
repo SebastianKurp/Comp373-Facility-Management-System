@@ -17,7 +17,7 @@ public class Building implements BuildingInterface {
         this.numberOfRooms = numberOfRooms;
         this.numberOfVacantRooms = numberOfVacantRooms;
         this.buildingNotes = buildingNotes;
-        this.floorList = new ArrayList<Floor>();
+        this.floorList = new ArrayList<>();
     }
 
     public void addFloorToBuilding(Floor floor){

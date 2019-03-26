@@ -3,6 +3,7 @@ package main.model.user;
 import main.client.user.UserInterface;
 import main.model.facility.Room;
 
+
 import java.util.ArrayList;
 
 public class User extends UserRegistry implements UserInterface {
@@ -20,7 +21,7 @@ public class User extends UserRegistry implements UserInterface {
         this.email = email;
         this.name = name;
 
-        System.out.println(String.format("%s, with %d, added to registry", name, id) );
+        //System.out.println(String.format("%s, with %d, added to registry", name, id) );
     }
 
     public void setUserId(int id){

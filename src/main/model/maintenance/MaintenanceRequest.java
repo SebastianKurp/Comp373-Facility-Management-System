@@ -1,6 +1,7 @@
 package main.model.maintenance;
 
 import main.client.maintenance.MaintenanceRequestInterface;
+import main.model.facility.Room;
 
 public class MaintenanceRequest extends MaintOff implements MaintenanceRequestInterface {
     public int id;
@@ -9,14 +10,17 @@ public class MaintenanceRequest extends MaintOff implements MaintenanceRequestIn
     public String notes;
     public int estimateCost;
     public int assignedId;
+    public Room room;
 
-    public MaintenanceRequest(String date, boolean inProgress, String notes, int estimateCost, int id, int assignedId){
+    public MaintenanceRequest(String date, boolean inProgress, String notes, int estimateCost, int id,
+            int assignedId, Room room){
         this.inProgress = inProgress;
         this.notes = notes;
         this.estimateCost = estimateCost;
         this.id = id;
         this.date = date;
         this.assignedId = assignedId;
+        this.room = room;
     }
 
     public String toString(){
@@ -68,5 +72,11 @@ public class MaintenanceRequest extends MaintOff implements MaintenanceRequestIn
         return this.assignedId;
     }
 
+    public Room getRoom() {
+        return room;
+    }
 
+    public void setRoom(Room room) {
+        this.room = room;
+    }
 }
