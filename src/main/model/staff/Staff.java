@@ -2,10 +2,14 @@ package main.model.staff;
 
 import main.client.user.StaffInterface;
 
-public class Staff extends StaffRegistry implements StaffInterface {
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
+
+public class Staff implements StaffInterface, PropertyChangeListener {
     public int id;
     public String position;
     public boolean onDuty;
+    private String staffAnnouncement;
 
     public Staff(int id, String position, boolean onDuty, boolean isAdmin){
         this.id = id;
@@ -37,4 +41,19 @@ public class Staff extends StaffRegistry implements StaffInterface {
         return this.onDuty;
     }
 
+    public void propertyChange(PropertyChangeEvent evt) {
+        this.setStaffAnnouncement((String) evt.getNewValue());
+    }
+
+    public String getStaffAnnouncement() {
+        if(staffAnnouncement == null){
+            return "No Announcements";
+        }else {
+            return this.staffAnnouncement;
+        }
+    }
+
+    public void setStaffAnnouncement(String staffAnnouncement) {
+        this.staffAnnouncement = staffAnnouncement;
+    }
 }

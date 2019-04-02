@@ -1,5 +1,6 @@
 package test.model;
 
+import main.model.staff.StaffRegistry;
 import org.junit.Test;
 import main.model.staff.Staff;
 
@@ -47,6 +48,17 @@ public class StaffTest {
         Staff staff = new Staff( 12,"Doorman", true,false );
         boolean onDuty = staff.getOnDuty();
         assertEquals(staff.onDuty, onDuty);
+    }
+
+    @Test
+    public void observerTest(){
+        StaffRegistry staffRegistry = new StaffRegistry();//observable
+        Staff staff = new Staff(1,"Manager",true,true);//observer
+
+        staffRegistry.addPropertyChangeListener(staff);
+        staffRegistry.setStaffAnnouncement("Test Announcement");
+
+        assertEquals(staff.getStaffAnnouncement(),"Test Announcement");
     }
 
 }

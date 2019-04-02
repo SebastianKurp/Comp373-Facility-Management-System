@@ -2,15 +2,20 @@ package main.model.staff;
 
 import main.client.facility.AdminInterface;
 
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StaffRegistry implements AdminInterface {
+public class StaffRegistry implements AdminInterface{
 //    private List<Object> stafflist = new ArrayList<Staff>(20);
     public List<Staff> staffList;
+    private String staffAnnouncement;
+    private PropertyChangeSupport support;
 
     public StaffRegistry(){
         this.staffList = new ArrayList<Staff>();
+        support = new PropertyChangeSupport(this);
     }
 
     public void addNewStaffMember(int id, String position, boolean onDuty, boolean isAdmin){
@@ -49,5 +54,22 @@ public class StaffRegistry implements AdminInterface {
 
     public void setStaffList(List<Staff> staffList) {
         this.staffList = staffList;
+    }
+
+    public void addPropertyChangeListener(PropertyChangeListener pcl) {
+        support.addPropertyChangeListener(pcl);
+    }
+
+    public void removePropertyChangeListener(PropertyChangeListener pcl) {
+        support.removePropertyChangeListener(pcl);
+    }
+
+    public void setStaffAnnouncement(String announcement){
+        support.firePropertyChange("staffAnnouncement",this.staffAnnouncement,announcement);
+        this.staffAnnouncement = announcement;
+    }
+
+    public String getStaffAnnouncement(){
+        return staffAnnouncement;
     }
 }
