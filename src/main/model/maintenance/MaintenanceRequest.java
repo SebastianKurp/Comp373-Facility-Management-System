@@ -3,6 +3,7 @@ package main.model.maintenance;
 import main.client.maintenance.MaintenanceRequestInterface;
 import main.model.facility.Room;
 
+
 public class MaintenanceRequest extends MaintOff implements MaintenanceRequestInterface {
     public int id;
     public String date;

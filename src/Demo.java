@@ -2,6 +2,8 @@ import main.model.facility.*;
 import main.model.maintenance.MaintOff;
 import main.model.maintenance.MaintenanceStaff;
 import main.model.maintenance.MaintenanceRequest;
+import main.model.staff.Staff;
+import main.model.staff.StaffRegistry;
 import main.model.user.User;
 import main.model.user.UserRegistry;
 
@@ -82,11 +84,11 @@ public class Demo {
 
         //add staff
         maintOff.addStaff(1,true,-1);
-        MaintenanceStaff staff = (MaintenanceStaff) context.getBean("maintenanceStaff");
-        staff.findMaintStaffById(1);
+        MaintenanceStaff mstaff = (MaintenanceStaff) context.getBean("maintenanceStaff");
+        mstaff.findMaintStaffById(1);
 
         //check assigning staff
-        maintOff.assignMaintStaff(request,staff);
+        maintOff.assignMaintStaff(request,mstaff);
         System.out.println(String.format("Staff id %d assigned to request %d",request.assignedId,request.id));
         maintOff.getSpecificLog(1);
         maintOff.getSpecificLog(2);
@@ -109,5 +111,15 @@ public class Demo {
         Mail mail = new Mail(1,"package","2/20/19",user);
         mailRoom.addMail(mail);
         mailRoom.printAllMail();
+
+
+        //Observer Pattern with test in staffTest
+        StaffRegistry staffRegistry = new StaffRegistry();//observable
+        Staff staff = new Staff(1,"Manager",true,true);//observer
+        staffRegistry.addPropertyChangeListener(staff);
+        System.out.println(staff.getStaffAnnouncement());
+        staffRegistry.setStaffAnnouncement("Test Announcement");
+        System.out.println(staff.getStaffAnnouncement());
+
     }
 }
