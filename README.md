@@ -16,3 +16,6 @@
 
 Can be found either in the PDF or for a better rendering using a tool that can read UML files(intelij has a great one)
 [![UML1](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/UML1.PNG?raw=true "UML1")](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/UML1.PNG?raw=true "UML1")
+
+### Patterns 
+Problem solved with observer pattern - Staff announcements created in the staff registry (observable) update each individual staff member's (observer) annoucment when the announcement is changed. This allows the system to change the announcement in one place and have the changes applied throughout each staff member. 
