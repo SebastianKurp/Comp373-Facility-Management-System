@@ -32,7 +32,9 @@ Another interface is the `MaintenanceInterface` which allows admin or maintenanc
 MaintenanceOffice.assignMainStaff(MaintenanceStaffMemberID, MaintenanceRequestId
 ```
 
-To even make things easier we added a admin interface which allows interaction with the staff, building, user, and maintenance interfaces.
+To even make things easier we added a admin interface which allows interaction with the staff, building, user, and maintenance interfaces. Below is the hierarchy of the interface, as shown the admin interface acts as a bridge between both the building and maintenance interfaces. Allowing for easier creation of a building which means easier duplication and less redundacy when add more falicites or buildings to the system.
+[![BridgePattern](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/UML2.png?raw=true"UML1")](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/UML2.png?raw=true "UML1")
+
 
 
 ## Observer:
