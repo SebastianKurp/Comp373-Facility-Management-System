@@ -15,7 +15,7 @@
 ### UML Diagram
 
 Can be found either in the PDF or for a better rendering using a tool that can read UML files(intelij has a great one)
-[![UML1](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/UML1.PNG?raw=true "UML1")](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/UML1.PNG?raw=true "UML1")
+[![UML2](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/UML2.png?raw=true"UML1")](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/UML2.png?raw=true "UML1")
 
 ### Patterns 
 ## Bridge:
