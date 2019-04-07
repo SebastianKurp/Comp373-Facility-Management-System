@@ -18,4 +18,23 @@ Can be found either in the PDF or for a better rendering using a tool that can r
 [![UML1](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/UML1.PNG?raw=true "UML1")](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/UML1.PNG?raw=true "UML1")
 
 ### Patterns 
-Problem solved with observer pattern - Staff announcements created in the staff registry (observable) update each individual staff member's (observer) annoucment when the announcement is changed. This allows the system to change the announcement in one place and have the changes applied throughout each staff member. 
+## Bridge:
+###### Problem solved:
+Having duplicate functions and an inability to reuse code if another building, floor, maintenanceOffice, or certain staff is added.
+
+The Bridge Pattern is used through project through our interface and model approach. The interfaces act as simple ways to interact with the models and allow us to cut out the redundancy.  For example, within our `BuildingInterface` an admin to easily create add multiple floors or even create a new building.
+```
+BuildingOne = Building.addFloor(floorNumber), Building.addRoomToFloor(floorNumber, roomNumber, roomType,…etc);
+
+```
+Another interface is the `MaintenanceInterface` which allows admin or maintenance staff easy creation or request for informations to be handled with ease.
+```
+MaintenanceOffice.assignMainStaff(MaintenanceStaffMemberID, MaintenanceRequestId
+```
+
+To even make things easier we added a admin interface which allows interaction with the staff, building, user, and maintenance interfaces.
+
+
+## Observer:
+###### Problem Solved:
+Staff announcements created in the staff registry (observable) update each individual staff member's (observer) announcement when the announcement is changed. This allows the system to change the announcement in one place and have the changes applied throughout each staff member.
