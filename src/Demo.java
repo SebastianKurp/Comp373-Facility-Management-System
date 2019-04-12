@@ -57,7 +57,7 @@ public class Demo {
         room2.setType("Single");
         room2.setCapacity(1);
         room2.setCost(750);
-        room2.setVacant(false);
+        room2.setVacant(true);
 
         room.toString();
         room2.toString();
@@ -102,7 +102,10 @@ public class Demo {
         user.setUserName("John Doe");
 
 
+
         Room vacantRoom = floor.getVacantRoom();
+        int roomNum = vacantRoom.roomNumber;
+        System.out.println(roomNum);
         user.setUserRoom(vacantRoom);
         System.out.println(String.format("User %s assigned to room %d",user.name,user.room.roomNumber));
 

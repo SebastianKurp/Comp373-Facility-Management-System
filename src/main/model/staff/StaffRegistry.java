@@ -9,7 +9,7 @@ import java.util.List;
 
 public class StaffRegistry implements AdminInterface{
 //    private List<Object> stafflist = new ArrayList<Staff>(20);
-    public List<Staff> staffList;
+    private List<Staff> staffList;
     private String staffAnnouncement;
     private PropertyChangeSupport support;
 

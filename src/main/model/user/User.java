@@ -7,6 +7,7 @@ import main.model.facility.Room;
 import java.util.ArrayList;
 
 public class User extends UserRegistry implements UserInterface {
+    public UserRegistry userRegistry;
     public ArrayList<User> users;
     public int id;
     public Room room;
@@ -64,6 +65,28 @@ public class User extends UserRegistry implements UserInterface {
         return this.name;
     }
 
+    public void setUserRegistry(UserRegistry userRegistry) {
+        this.userRegistry = userRegistry;
+    }
+
+    public UserRegistry getUserRegistry(){
+        return userRegistry;
+    }
+
+    public User findUserByRoom(int roomNumber){
+        User u= userRegistry.findUserByRoom(roomNumber);
+        return u;
+    }
+
+    public User findUserByName(String name){
+        User u = userRegistry.findUserByName(name);
+        return u;
+    }
+
+    public void addUser(int id, Room room, String phoneNumber, String email, String name){
+        userRegistry.addUser(id,room,phoneNumber,email,name);
+    }
+/*
     public User findUserByRoom(int roomNumber ){
         for(User user:users){
             if(user.room.roomNumber == roomNumber){
@@ -89,5 +112,5 @@ public class User extends UserRegistry implements UserInterface {
     public void addUser(int id, Room room, String phoneNumber, String email, String name){
         User user = new User(id,room,phoneNumber,email,name);
         users.add(user);
-    }
+    }*/
 }
