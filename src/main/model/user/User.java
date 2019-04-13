@@ -86,8 +86,8 @@ public class User extends UserRegistry implements UserInterface {
         return u;
     }
 
-    public void addUser(int id, Room room, String phoneNumber, String email, String name){
-        userRegistry.addUser(id,room,phoneNumber,email,name);
+    public void addUser(User user){
+        userRegistry.addUser(user);
     }
 /*
     public User findUserByRoom(int roomNumber ){

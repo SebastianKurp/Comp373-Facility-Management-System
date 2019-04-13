@@ -7,6 +7,6 @@ public interface UserInterface {
     public User findUserByRoom(int roomNumber );
     public User findUserByName(String name);
 
-    public void addUser(int id, Room room, String phoneNumber, String email, String name);
+    public void addUser(User user);
 
 }

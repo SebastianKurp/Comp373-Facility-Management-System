@@ -99,11 +99,14 @@ public class Demo {
         User user = (User) context.getBean("user");
         user.setUserRegistry(userRegistry);
         user.setUserId(1);
-        user.setUserRoom(null);
+        user.setUserRoom(room);
         user.setUserPhonenumber("9999999999");
         user.setUserEmail("fake@gmail.com");
         user.setUserName("John Doe");
-        
+        user.addUser(user);
+        user.findUserByRoom(1);
+        user.findUserByRoom(12);
+
 
 
 

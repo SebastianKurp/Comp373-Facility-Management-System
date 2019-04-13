@@ -13,9 +13,9 @@ public class UserRegistry {
         this.userList = new ArrayList<User>();
     }
 
-    public void addUser(int id, Room room, String phoneNumber, String email, String name) {
+    public void addUser(User newUser) {
         //User newUser = new User(id, room, phoneNumber, email, name);
-        User newUser = new User();
+        //User newUser = new User();
         userList.add(newUser);
     }
 
@@ -46,7 +46,7 @@ public class UserRegistry {
                 return user;
             }
         }
-        System.out.println(String.format("User with roomnumber: %d found", roomNumber));
+        System.out.println(String.format("User with roomnumber: %d not found", roomNumber));
         return null;
     }
 
