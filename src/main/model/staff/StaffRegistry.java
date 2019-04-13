@@ -18,8 +18,7 @@ public class StaffRegistry implements AdminInterface{
         support = new PropertyChangeSupport(this);
     }
 
-    public void addNewStaffMember(int id, String position, boolean onDuty, boolean isAdmin){
-        Staff newStaff = new Staff( id, position, onDuty, isAdmin);
+    public void addNewStaffMember(Staff newStaff){
         staffList.add(newStaff);
     }
 

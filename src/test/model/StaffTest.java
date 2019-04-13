@@ -5,7 +5,7 @@ import org.junit.Test;
 import main.model.staff.Staff;
 
 import static org.junit.Assert.*;
-
+/*
 public class StaffTest {
 
     @Test
@@ -60,5 +60,6 @@ public class StaffTest {
 
         assertEquals(staff.getStaffAnnouncement(),"Test Announcement");
     }
-
 }
+*/
+

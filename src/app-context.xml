@@ -44,9 +44,7 @@
 
     <bean id = "user" class = "main.model.user.User" scope="prototype">
         <property name="userRegistry" ref="userRegistry"/>
-        <property name="userList">
-            <list/>
-        </property>
+
     </bean>
 
     <bean id="userRegistry" class="main.model.user.UserRegistry" scope="prototype">
@@ -57,14 +55,13 @@
 
 
     <bean id = "staff" class = "main.model.staff.Staff" scope="prototype">
-        <constructor-arg name="id" type="int" value="0"/>
-        <constructor-arg name="position" value=""/>
-        <constructor-arg name="onDuty" value="true"/>
-        <constructor-arg name="isAdmin" value="true"/>
+        <property name="staffRegistry" ref="staffRegistry"/>
     </bean>
 
     <bean id="staffRegistry" class="main.model.staff.StaffRegistry" scope="prototype" >
-        <property name="staffList" ref="staff"/>
+        <property name="staffList">
+            <list/>
+        </property>
     </bean>
 
 

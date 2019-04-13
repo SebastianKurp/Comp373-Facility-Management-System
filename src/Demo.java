@@ -41,7 +41,7 @@ public class Demo {
         building.addFloorToBuilding(floor);
         building.addFloorToBuilding(floor1);
 
-        UserRegistry UserReg = new UserRegistry();
+        //UserRegistry UserReg = new UserRegistry();
         //create falcity users
 
 
@@ -127,7 +127,10 @@ public class Demo {
 
         //Observer Pattern with test in staffTest
         StaffRegistry staffRegistry = new StaffRegistry();//observable
-        Staff staff = new Staff(1,"Manager",true,true);//observer
+        Staff staff = (Staff) context.getBean("staff");//observer
+        staff.setStaffId(1);
+        staff.addStaff(staff);
+        staff.setStaffRegistry(staffRegistry);
         staffRegistry.addPropertyChangeListener(staff);
         System.out.println(staff.getStaffAnnouncement());
         staffRegistry.setStaffAnnouncement("Test Announcement");
