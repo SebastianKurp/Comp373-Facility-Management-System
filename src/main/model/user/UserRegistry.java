@@ -14,7 +14,8 @@ public class UserRegistry {
     }
 
     public void addUser(int id, Room room, String phoneNumber, String email, String name) {
-        User newUser = new User(id, room, phoneNumber, email, name);
+        //User newUser = new User(id, room, phoneNumber, email, name);
+        User newUser = new User();
         userList.add(newUser);
     }
 

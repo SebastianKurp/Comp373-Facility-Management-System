@@ -8,14 +8,14 @@ import java.util.ArrayList;
 
 public class User extends UserRegistry implements UserInterface {
     public UserRegistry userRegistry;
-    public ArrayList<User> users;
+
     public int id;
     public Room room;
     public String phoneNumber;
     public String email;
     public String name;
 
-    public User(int id, Room room, String phoneNumber, String email, String name) {
+    /*public User(int id, Room room, String phoneNumber, String email, String name) {
         this.id = id;
         this.room = room;
         this.phoneNumber = phoneNumber;
@@ -23,6 +23,15 @@ public class User extends UserRegistry implements UserInterface {
         this.name = name;
 
         //System.out.println(String.format("%s, with %d, added to registry", name, id) );
+    }*/
+    public User(){}
+
+    public void setUserRegistry(UserRegistry userRegistry) {
+        this.userRegistry = userRegistry;
+    }
+
+    public UserRegistry getUserRegistry(){
+        return userRegistry;
     }
 
     public void setUserId(int id){
@@ -65,13 +74,7 @@ public class User extends UserRegistry implements UserInterface {
         return this.name;
     }
 
-    public void setUserRegistry(UserRegistry userRegistry) {
-        this.userRegistry = userRegistry;
-    }
 
-    public UserRegistry getUserRegistry(){
-        return userRegistry;
-    }
 
     public User findUserByRoom(int roomNumber){
         User u= userRegistry.findUserByRoom(roomNumber);

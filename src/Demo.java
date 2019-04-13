@@ -62,9 +62,10 @@ public class Demo {
         room.toString();
         room2.toString();
 
+        /*
         UserReg.addUser(1,room,"64023213123123","zeus@gmail.com", "Zeus");;
         UserReg.addUser(2,room,"64023213123323","hades@gmail.com", "Hades");
-        UserReg.addUser(3,room2,"64023213123223","posedion@gmail.com", "Posedion");
+        UserReg.addUser(3,room2,"64023213123223","posedion@gmail.com", "Posedion");*/
 
         //create requests
         MaintOff maintOff = (MaintOff) context.getBean("maintOff");
@@ -94,12 +95,17 @@ public class Demo {
         maintOff.getSpecificLog(2);
 
         //check users
+        UserRegistry userRegistry = new UserRegistry();
         User user = (User) context.getBean("user");
+        user.setUserRegistry(userRegistry);
         user.setUserId(1);
         user.setUserRoom(null);
         user.setUserPhonenumber("9999999999");
         user.setUserEmail("fake@gmail.com");
         user.setUserName("John Doe");
+        
+
+
 
 
 

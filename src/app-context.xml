@@ -44,11 +44,10 @@
 
     <bean id = "user" class = "main.model.user.User" scope="prototype">
         <property name="userRegistry" ref="userRegistry"/>
-        <constructor-arg name="id" type="int" value="0"/>
-        <constructor-arg name="room"  ref="room"/>
-        <constructor-arg name="phoneNumber" value=""/>
-        <constructor-arg name="email" value=""/>
-        <constructor-arg name="name" value=""/>
+
+        <property name="userList">
+            <list/>
+        </property>
     </bean>
 
     <bean id="userRegistry" class="main.model.user.UserRegistry" scope="prototype">
