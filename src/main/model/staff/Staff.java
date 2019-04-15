@@ -6,15 +6,22 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 public class Staff implements StaffInterface, PropertyChangeListener {
+    public StaffRegistry staffRegistry;
+
     public int id;
     public String position;
     public boolean onDuty;
     private String staffAnnouncement;
 
-    public Staff(int id, String position, boolean onDuty, boolean isAdmin){
-        this.id = id;
-        this.position = position;
-        this.onDuty = onDuty;
+    public Staff(){
+    }
+
+    public StaffRegistry getStaffRegistry() {
+        return staffRegistry;
+    }
+
+    public void setStaffRegistry(StaffRegistry staffRegistry) {
+        this.staffRegistry = staffRegistry;
     }
 
     public void setStaffId(int id){
@@ -55,5 +62,9 @@ public class Staff implements StaffInterface, PropertyChangeListener {
 
     public void setStaffAnnouncement(String staffAnnouncement) {
         this.staffAnnouncement = staffAnnouncement;
+    }
+
+    public void addStaff(Staff staff){
+        staffRegistry.addNewStaffMember(staff);
     }
 }

@@ -7,8 +7,10 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class MailRoomTest {
-    User user = new User(1,null,"6366369999","fake@gmail.com","testUser1");
-    User user1 = new User(1,null,"6366369999","fake@gmail.com","testUser2");
+    //User user = new User(1,null,"6366369999","fake@gmail.com","testUser1");
+    //User user1 = new User(1,null,"6366369999","fake@gmail.com","testUser2");
+    User user = new User();
+    User user1 = new User();
 
 
     @Test
@@ -28,7 +30,9 @@ public class MailRoomTest {
         MailRoom mailRoom = new MailRoom();
         Mail mail = new Mail(1,"package","2/20/19",user);
         Mail mail2 = new Mail(2,"package","2/20/19",user1);
-        User user2 = new User(1,null,"6366369999","fake@gmail.com","testUser3");
+        //User user2 = new User(1,null,"6366369999","fake@gmail.com","testUser3");
+        User user2 = new User();
+
 
         mailRoom.addMail(mail);
         mailRoom.addMail(mail2);

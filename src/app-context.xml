@@ -16,6 +16,7 @@
     </bean>
 
     <bean id = "floor" class = "main.model.facility.Floor" scope="prototype">
+        <property name="roomList" ref="room" />
         <constructor-arg name="inRepair" value= "false" />
         <constructor-arg name="vacant" value="false" />
         <constructor-arg name="numberOfRooms" type="int" value="0" />
@@ -23,6 +24,7 @@
     </bean>
 
     <bean id="building" class="main.model.facility.Building" scope="prototype">
+        <property name="floorList" ref="floor"/>
         <constructor-arg name="name" value="${}" />
         <constructor-arg name="buildingNotes" value="${}" />
         <constructor-arg name="numberOfRooms" type="int" value="0" />
@@ -36,27 +38,31 @@
         <constructor-arg name="recipient" ref="user"/>
     </bean>
 
-    <bean id = "mailRoom" class = "main.model.facility.MailRoom" scope="prototype"/>
-
-    <bean id = "user" class = "main.model.user.User" scope="prototype">
-        <constructor-arg name="id" type="int" value="0"/>
-        <constructor-arg name="room"  ref="room"/>
-        <constructor-arg name="phoneNumber" value=""/>
-        <constructor-arg name="email" value=""/>
-        <constructor-arg name="name" value=""/>
+    <bean id = "mailRoom" class = "main.model.facility.MailRoom" scope="prototype">
+        <property name="mailInventory" ref="mail"/>
     </bean>
 
-    <bean id="userRegistry" class="main.model.user.UserRegistry" scope="prototype"/>
+    <bean id = "user" class = "main.model.user.User" scope="prototype">
+        <property name="userRegistry" ref="userRegistry"/>
+
+    </bean>
+
+    <bean id="userRegistry" class="main.model.user.UserRegistry" scope="prototype">
+        <property name="userList">
+            <list/>
+        </property>
+    </bean>
 
 
     <bean id = "staff" class = "main.model.staff.Staff" scope="prototype">
-        <constructor-arg name="id" type="int" value="0"/>
-        <constructor-arg name="position" value=""/>
-        <constructor-arg name="onDuty" value="true"/>
-        <constructor-arg name="isAdmin" value="true"/>
+        <property name="staffRegistry" ref="staffRegistry"/>
     </bean>
 
-    <bean id="staffRegistry" class="main.model.staff.StaffRegistry" scope="prototype" />
+    <bean id="staffRegistry" class="main.model.staff.StaffRegistry" scope="prototype" >
+        <property name="staffList">
+            <list/>
+        </property>
+    </bean>
 
 
 
@@ -76,7 +82,10 @@
         <constructor-arg name="currentTask" type="int" value="0"/>
     </bean>
 
-    <bean id="maintOff" class="main.model.maintenance.MaintOff" scope="prototype" />
+    <bean id="maintOff" class="main.model.maintenance.MaintOff" scope="prototype" >
+        <property name="maintenanceStaffList" ref="maintenanceStaff"/>
+        <property name="requestLog" ref="maintenanceRequest"/>
+    </bean>
 
 
 </beans>

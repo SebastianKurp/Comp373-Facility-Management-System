@@ -7,7 +7,8 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class MailTest {
-    User user = new User(1,null,"6366369999","fake@gmail.com","testUser1");
+    //User user = new User(1,null,"6366369999","fake@gmail.com","testUser1");
+    User user = new User();
     @Test
     public void setRoomNumberTest(){
         Mail m = new Mail(1, "package", "01-01-2019",user);
@@ -35,7 +36,9 @@ public class MailTest {
     @Test
     public void setreciepientTest(){
         Mail m = new Mail(1, "package", "01-01-2019",user);
-        User user = new User(1,null,"6366369999","fake@gmail.com","testUser2");
+        //User user = new User(1,null,"6366369999","fake@gmail.com","testUser2");
+        User user = new User();
+
         m.setreciepient(user);
         assertEquals(user,m.recipient);
     }

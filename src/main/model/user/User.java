@@ -7,14 +7,15 @@ import main.model.facility.Room;
 import java.util.ArrayList;
 
 public class User extends UserRegistry implements UserInterface {
-    public ArrayList<User> users;
+    public UserRegistry userRegistry;
+
     public int id;
     public Room room;
     public String phoneNumber;
     public String email;
     public String name;
 
-    public User(int id, Room room, String phoneNumber, String email, String name) {
+    /*public User(int id, Room room, String phoneNumber, String email, String name) {
         this.id = id;
         this.room = room;
         this.phoneNumber = phoneNumber;
@@ -22,6 +23,15 @@ public class User extends UserRegistry implements UserInterface {
         this.name = name;
 
         //System.out.println(String.format("%s, with %d, added to registry", name, id) );
+    }*/
+    public User(){}
+
+    public void setUserRegistry(UserRegistry userRegistry) {
+        this.userRegistry = userRegistry;
+    }
+
+    public UserRegistry getUserRegistry(){
+        return userRegistry;
     }
 
     public void setUserId(int id){
@@ -64,6 +74,22 @@ public class User extends UserRegistry implements UserInterface {
         return this.name;
     }
 
+
+
+    public User findUserByRoom(int roomNumber){
+        User u= userRegistry.findUserByRoom(roomNumber);
+        return u;
+    }
+
+    public User findUserByName(String name){
+        User u = userRegistry.findUserByName(name);
+        return u;
+    }
+
+    public void addUser(User user){
+        userRegistry.addUser(user);
+    }
+/*
     public User findUserByRoom(int roomNumber ){
         for(User user:users){
             if(user.room.roomNumber == roomNumber){
@@ -89,5 +115,5 @@ public class User extends UserRegistry implements UserInterface {
     public void addUser(int id, Room room, String phoneNumber, String email, String name){
         User user = new User(id,room,phoneNumber,email,name);
         users.add(user);
-    }
+    }*/
 }

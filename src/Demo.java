@@ -41,7 +41,7 @@ public class Demo {
         building.addFloorToBuilding(floor);
         building.addFloorToBuilding(floor1);
 
-        UserRegistry UserReg = new UserRegistry();
+        //UserRegistry UserReg = new UserRegistry();
         //create falcity users
 
 
@@ -57,14 +57,15 @@ public class Demo {
         room2.setType("Single");
         room2.setCapacity(1);
         room2.setCost(750);
-        room2.setVacant(false);
+        room2.setVacant(true);
 
         room.toString();
         room2.toString();
 
+        /*
         UserReg.addUser(1,room,"64023213123123","zeus@gmail.com", "Zeus");;
         UserReg.addUser(2,room,"64023213123323","hades@gmail.com", "Hades");
-        UserReg.addUser(3,room2,"64023213123223","posedion@gmail.com", "Posedion");
+        UserReg.addUser(3,room2,"64023213123223","posedion@gmail.com", "Posedion");*/
 
         //create requests
         MaintOff maintOff = (MaintOff) context.getBean("maintOff");
@@ -94,15 +95,26 @@ public class Demo {
         maintOff.getSpecificLog(2);
 
         //check users
+        UserRegistry userRegistry = new UserRegistry();
         User user = (User) context.getBean("user");
+        user.setUserRegistry(userRegistry);
         user.setUserId(1);
-        user.setUserRoom(null);
+        user.setUserRoom(room);
         user.setUserPhonenumber("9999999999");
         user.setUserEmail("fake@gmail.com");
         user.setUserName("John Doe");
+        user.addUser(user);
+        user.findUserByRoom(1);
+        user.findUserByRoom(12);
+
+
+
+
 
 
         Room vacantRoom = floor.getVacantRoom();
+        int roomNum = vacantRoom.roomNumber;
+        System.out.println(roomNum);
         user.setUserRoom(vacantRoom);
         System.out.println(String.format("User %s assigned to room %d",user.name,user.room.roomNumber));
 
@@ -115,7 +127,10 @@ public class Demo {
 
         //Observer Pattern with test in staffTest
         StaffRegistry staffRegistry = new StaffRegistry();//observable
-        Staff staff = new Staff(1,"Manager",true,true);//observer
+        Staff staff = (Staff) context.getBean("staff");//observer
+        staff.setStaffId(1);
+        staff.addStaff(staff);
+        staff.setStaffRegistry(staffRegistry);
         staffRegistry.addPropertyChangeListener(staff);
         System.out.println(staff.getStaffAnnouncement());
         staffRegistry.setStaffAnnouncement("Test Announcement");

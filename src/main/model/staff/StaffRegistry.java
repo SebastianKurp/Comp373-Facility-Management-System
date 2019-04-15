@@ -9,7 +9,7 @@ import java.util.List;
 
 public class StaffRegistry implements AdminInterface{
 //    private List<Object> stafflist = new ArrayList<Staff>(20);
-    public List<Staff> staffList;
+    private List<Staff> staffList;
     private String staffAnnouncement;
     private PropertyChangeSupport support;
 
@@ -18,8 +18,7 @@ public class StaffRegistry implements AdminInterface{
         support = new PropertyChangeSupport(this);
     }
 
-    public void addNewStaffMember(int id, String position, boolean onDuty, boolean isAdmin){
-        Staff newStaff = new Staff( id, position, onDuty, isAdmin);
+    public void addNewStaffMember(Staff newStaff){
         staffList.add(newStaff);
     }
 
