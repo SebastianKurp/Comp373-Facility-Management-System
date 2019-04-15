@@ -4,7 +4,8 @@ import main.client.maintenance.MaintenanceRequestInterface;
 import main.model.facility.Room;
 
 
-public class MaintenanceRequest extends MaintOff implements MaintenanceRequestInterface {
+public class MaintenanceRequest implements MaintenanceRequestInterface {
+    public MaintOff maintOff;
     public int id;
     public String date;
     public boolean inProgress;
@@ -13,15 +14,15 @@ public class MaintenanceRequest extends MaintOff implements MaintenanceRequestIn
     public int assignedId;
     public Room room;
 
-    public MaintenanceRequest(String date, boolean inProgress, String notes, int estimateCost, int id,
-            int assignedId, Room room){
-        this.inProgress = inProgress;
-        this.notes = notes;
-        this.estimateCost = estimateCost;
-        this.id = id;
-        this.date = date;
-        this.assignedId = assignedId;
-        this.room = room;
+    public MaintenanceRequest(){
+    }
+
+    public MaintOff getMaintOff() {
+        return maintOff;
+    }
+
+    public void setMaintOff(MaintOff maintOff) {
+        this.maintOff = maintOff;
     }
 
     public String toString(){
@@ -79,5 +80,28 @@ public class MaintenanceRequest extends MaintOff implements MaintenanceRequestIn
 
     public void setRoom(Room room) {
         this.room = room;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void addRequest(MaintenanceRequest request){
+        maintOff.addRequest(request);
+    }
+
+    public void getAllLogs(){
+        maintOff.getAllLogs();
+    }
+
+    public MaintenanceRequest getSpecificLog(int id){
+        return maintOff.getSpecificLog(id);
+    }
+
+    public int getNumberOfRequests(){
+        return maintOff.getNumberOfRequests();
+    }
+    public int getNumberRequestsInProgress(){
+        return maintOff.getNumberRequestsInProgress();
     }
 }

@@ -12,11 +12,7 @@ public class Building implements BuildingInterface {
     public int numberOfVacantRooms;
     public String buildingNotes;
 
-    public Building(String name,int numberOfRooms, int numberOfVacantRooms,String buildingNotes){
-        this.name = name;
-        this.numberOfRooms = numberOfRooms;
-        this.numberOfVacantRooms = numberOfVacantRooms;
-        this.buildingNotes = buildingNotes;
+    public Building(){
         this.floorList = new ArrayList<>();
     }
 

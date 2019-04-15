@@ -8,38 +8,31 @@
     <description>Wiring the dependencies for the Facility Management System.</description>
 
     <bean id = "room" class = "main.model.facility.Room" scope="prototype">
-        <constructor-arg name="roomNumber" type="int" value="0"/>
-        <constructor-arg name="type" value=""/>
-        <constructor-arg name="capacity" type="int" value="0"/>
-        <constructor-arg name="cost" type="double" value="0"/>
-        <constructor-arg name="vacant" value="true"/>
+        <property name="floor" ref="floor"/>
     </bean>
 
     <bean id = "floor" class = "main.model.facility.Floor" scope="prototype">
-        <property name="roomList" ref="room" />
-        <constructor-arg name="inRepair" value= "false" />
-        <constructor-arg name="vacant" value="false" />
-        <constructor-arg name="numberOfRooms" type="int" value="0" />
-        <constructor-arg name="floorNumber" type="int" value="0"/>
+        <property name="roomList">
+            <list/>
+        </property>
+        <property name="building" ref="building"/>
+
     </bean>
 
     <bean id="building" class="main.model.facility.Building" scope="prototype">
-        <property name="floorList" ref="floor"/>
-        <constructor-arg name="name" value="${}" />
-        <constructor-arg name="buildingNotes" value="${}" />
-        <constructor-arg name="numberOfRooms" type="int" value="0" />
-        <constructor-arg name="numberOfVacantRooms" type="int" value="0" />
-
+        <property name="floorList">
+            <list/>
+        </property>
     </bean>
+
     <bean id = "mail" class = "main.model.facility.Mail" scope="prototype">
-        <constructor-arg name="roomNumber" type="int" value="0"/>
-        <constructor-arg name="mailType" value=""/>
-        <constructor-arg name="dateOfArrival" value=""/>
-        <constructor-arg name="recipient" ref="user"/>
+        <property name="mailRoom" ref="mailRoom"/>
     </bean>
 
     <bean id = "mailRoom" class = "main.model.facility.MailRoom" scope="prototype">
-        <property name="mailInventory" ref="mail"/>
+        <property name="mailInventory">
+            <list/>
+        </property>
     </bean>
 
     <bean id = "user" class = "main.model.user.User" scope="prototype">
@@ -67,24 +60,20 @@
 
 
     <bean id = "maintenanceRequest" class = "main.model.maintenance.MaintenanceRequest" scope="prototype">
-        <constructor-arg name="id" type="int" value="0"/>
-        <constructor-arg name="estimateCost" type="int" value="0"/>
-        <constructor-arg name="date" value=""/>
-        <constructor-arg name="assignedId" type="int" value="0"/>
-        <constructor-arg name="inProgress" value="true"/>
-        <constructor-arg name="notes" value="true"/>
-        <constructor-arg name="room" ref="room"/>
+        <property name="maintOff" ref="maintOff"/>
     </bean>
 
     <bean id="maintenanceStaff" class="main.model.maintenance.MaintenanceStaff" scope="prototype">
-        <constructor-arg name="id" type="int" value="0"/>
-        <constructor-arg name="onDuty" value="true" />
-        <constructor-arg name="currentTask" type="int" value="0"/>
+        <property name="maintOff" ref="maintOff"/>
     </bean>
 
     <bean id="maintOff" class="main.model.maintenance.MaintOff" scope="prototype" >
-        <property name="maintenanceStaffList" ref="maintenanceStaff"/>
-        <property name="requestLog" ref="maintenanceRequest"/>
+        <property name="maintenanceStaffList">
+            <list/>
+        </property>
+        <property name="requestLog">
+            <list/>
+        </property>
     </bean>
 
 

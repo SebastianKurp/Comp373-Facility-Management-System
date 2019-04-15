@@ -4,16 +4,22 @@ import main.client.maintenance.MaintenanceOffice;
 
 import java.util.ArrayList;
 
-public class MaintenanceStaff extends MaintOff implements MaintenanceOffice {
+public class MaintenanceStaff implements MaintenanceOffice {
+    private MaintOff maintOff;
     public int id;
     public boolean onDuty;
     public int currentTask;//equal to manReq id
 
 
-    public MaintenanceStaff(int id, boolean onDuty, int currentTask){
-        this.id = id;
-        this.onDuty = onDuty;
-        this.currentTask = currentTask;
+    public MaintenanceStaff(){
+    }
+
+    public MaintOff getMaintOff() {
+        return maintOff;
+    }
+
+    public void setMaintOff(MaintOff maintOff) {
+        this.maintOff = maintOff;
     }
 
     public void setCurrentTask(int taskId){
@@ -32,6 +38,15 @@ public class MaintenanceStaff extends MaintOff implements MaintenanceOffice {
         }
     }
 
+    public void addStaff(MaintenanceStaff staff){
+        maintOff.addStaff(staff);
+    }
 
+    public MaintenanceStaff findMaintStaffById(int id){
+        return maintOff.findMaintStaffById(id);
+    }
 
+    public void assignMaintStaff(MaintenanceRequest request, MaintenanceStaff staff) {
+        maintOff.assignMaintStaff(request,staff);
+    }
 }

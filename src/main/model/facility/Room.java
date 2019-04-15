@@ -1,6 +1,7 @@
 package main.model.facility;
 
 public class Room {
+    public Floor floor;
     public int roomNumber;
     public String type;
     public int capacity;
@@ -8,22 +9,24 @@ public class Room {
     public boolean vacant;
 
 
-    public Room( int roomNumber, String type, int capacity, double cost, boolean vacant){
-        this.roomNumber = roomNumber;
-        this.type = type;
-        this.capacity = capacity;
-        this.cost = cost;
-        this.vacant = vacant;
+    public Room(){
     }
 
-    public String toString(){
+    public Floor getFloor() {
+        return floor;
+    }
+
+    public void setFloor(Floor floor) {
+        this.floor = floor;
+    }
+
+    public void printRoom(){
         System.out.println(String.format("==main.model.facility.Room # %d ==", roomNumber));
         System.out.println(String.format("main.model.facility.Room Type: %s",type));
         System.out.println(String.format("Capacity: %d",capacity));
         System.out.println(String.format("Cost Per Month: %.2f",cost));
         System.out.println(String.format("vacant: %b", vacant));
         System.out.println("=========");
-        return "";
     }
 
     public void setRoomNumber(int roomNumber){
@@ -64,6 +67,10 @@ public class Room {
 
     public boolean getVacant(){
         return vacant;
+    }
+
+    public void addRoomToFloor(Room room){
+        floor.addRoomToFloor(room);
     }
 
 }

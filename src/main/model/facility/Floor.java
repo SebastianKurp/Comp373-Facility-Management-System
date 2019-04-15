@@ -4,24 +4,28 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Floor {
-    public List<Room> roomList;
+    public Building building;
 
+    public List<Room> roomList;
     public int floorNumber;
     public int numberOfRooms;
     public boolean inRepair;
     public boolean vacant;
 
-    public Floor(int floorNumber, int numberOfRooms,boolean vacant, boolean inRepair){
-        this.floorNumber = floorNumber;
-        this.numberOfRooms = numberOfRooms;
-        this.vacant = vacant;
-        this.inRepair = inRepair;
+    public Building getBuilding() {
+        return building;
+    }
+
+    public void setBuilding(Building building) {
+        this.building = building;
+    }
+
+    public Floor(){
         this.roomList = new ArrayList<>();
     }
 
-    public void addRoomToFloor(int roomNumber, String type, int capacity, double cost, boolean vacant ){
+    public void addRoomToFloor(Room newRoom){
         if(roomList.size()<numberOfRooms) {
-            Room newRoom = new Room(roomNumber, type, capacity, cost, vacant);
             roomList.add(newRoom);
         }else{
             System.out.println("Too Many Rooms on this floor to add new room");
@@ -82,5 +86,9 @@ public class Floor {
 
     public void setRoomList(List<Room> roomList) {
         this.roomList = roomList;
+    }
+
+    public void addFloorToBuilding(Floor floor){
+        building.addFloorToBuilding(floor);
     }
 }

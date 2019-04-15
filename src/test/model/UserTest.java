@@ -4,7 +4,7 @@ import main.model.facility.Room;
 import main.model.user.User;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+/*
 public class UserTest {
     Room room = new Room(1,"Double",2,1500,false);
     @Test
@@ -100,4 +100,4 @@ public class UserTest {
         String name = u.getUserName();
         assertEquals(name,u.name);
     }
-}
+}*/

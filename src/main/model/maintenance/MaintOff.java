@@ -12,10 +12,8 @@ public class MaintOff {
         this.requestLog = new ArrayList<MaintenanceRequest>();
         this.maintenanceStaffList = new ArrayList<MaintenanceStaff>();
     }
-    public void addRequest(String date, boolean inProgress, String notes, int estimateCost, int id, int assignedId, Room room) {
-        MaintenanceRequest maintenanceRequest = new MaintenanceRequest(date, inProgress, notes, estimateCost,
-                id, assignedId, room);
-        requestLog.add(maintenanceRequest);
+    public void addRequest(MaintenanceRequest request){
+        requestLog.add(request);
     }
 
     public void getAllLogs(){
@@ -53,8 +51,7 @@ public class MaintOff {
         System.out.println("There are " + count + " requests in progress");
         return count;
     }
-    public void addStaff(int id, boolean onDuty, int currentTask){
-        MaintenanceStaff maintenanceStaff = new MaintenanceStaff(id,onDuty,currentTask);
+    public void addStaff(MaintenanceStaff maintenanceStaff){
         maintenanceStaffList.add(maintenanceStaff);
     }
 
