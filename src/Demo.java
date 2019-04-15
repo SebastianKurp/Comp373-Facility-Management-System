@@ -121,7 +121,7 @@ public class Demo {
         maintOff.getSpecificLog(2);
 
         //check users
-        UserRegistry userRegistry = new UserRegistry();
+        UserRegistry userRegistry = (UserRegistry) context.getBean("userRegistry");
         User user = (User) context.getBean("user");
         user.setUserRegistry(userRegistry);
         user.setUserId(1);
@@ -141,7 +141,7 @@ public class Demo {
 
         //check mail dependent on mailRoom
         MailRoom mailRoom = (MailRoom) context.getBean("mailRoom");
-        Mail mail = new Mail();
+        Mail mail = (Mail) context.getBean("mail");
         mail.setMailRoom(mailRoom);
 
         mail.setMailType("package");
@@ -153,11 +153,11 @@ public class Demo {
 
 
         //Observer Pattern with test in staffTest
-        StaffRegistry staffRegistry = new StaffRegistry();//observable
+        StaffRegistry staffRegistry = (StaffRegistry) context.getBean("staffRegistry");//observable
         Staff staff = (Staff) context.getBean("staff");//observer
+        staff.setStaffRegistry(staffRegistry);
         staff.setStaffId(1);
         staff.addStaff(staff);
-        staff.setStaffRegistry(staffRegistry);
         staffRegistry.addPropertyChangeListener(staff);
         System.out.println(staff.getStaffAnnouncement());
         staffRegistry.setStaffAnnouncement("Test Announcement");
