@@ -4,7 +4,7 @@ import main.model.maintenance.MaintenanceStaff;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-
+/*
 public class MaintenanceStaffTest {
     @Test
     public void setCurrentTaskTest(){
@@ -29,4 +29,4 @@ public class MaintenanceStaffTest {
         maintenanceStaff.changeOnDuty();
         assertEquals(maintenanceStaff.onDuty,true);
     }
-}
+}*/

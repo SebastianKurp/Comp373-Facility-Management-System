@@ -2,23 +2,22 @@ package main.model.facility;
 
 import main.model.user.User;
 
-public class Mail extends MailRoom {
+public class Mail{
+    public MailRoom mailRoom;
     public int roomNumber;
     public String mailType; //package or letter/bills
     public String dateOfArrival;
     public User recipient;
 
-    public Mail( int roomNumber, String mailType, String dateOfArrival, User recipient){
-        this.roomNumber = roomNumber;
-        this.mailType = mailType;
-        this.dateOfArrival = dateOfArrival;
-        this.recipient = recipient;
+    public Mail(){}
 
-        /*System.out.println(String.format("==Room # %d ==", roomNumber));
-        System.out.println(String.format("recipient %s",recipient.name));
-        System.out.println(String.format("Date of Arrival %s",dateOfArrival));
-        System.out.println(String.format("Type of Mail %s",mailType));
-        System.out.println("=========");*/
+
+    public MailRoom getMailRoom() {
+        return mailRoom;
+    }
+
+    public void setMailRoom(MailRoom mailRoom) {
+        this.mailRoom = mailRoom;
     }
 
     public void setRoomNumber(int roomNumber){
@@ -44,4 +43,12 @@ public class Mail extends MailRoom {
     public String getDateOfArrival() { return dateOfArrival;}
 
     public User getreciepient() { return recipient;}
+
+    public void addMail(Mail mail){
+        mailRoom.addMail(mail);
+    }
+
+    public void printAllMail(){
+        mailRoom.printAllMail();
+    }
 }

@@ -3,7 +3,7 @@ package test.model;
 import main.model.facility.Room;
 import org.junit.Test;
 import static org.junit.Assert.*;
-
+/*
 public class RoomTest {
 
     @Test
@@ -61,4 +61,4 @@ public class RoomTest {
         boolean repairStatus = room.getVacant();
         assertEquals(room.vacant, false);
     }
-}
+}*/

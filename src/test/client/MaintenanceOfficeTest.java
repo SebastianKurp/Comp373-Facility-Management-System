@@ -9,7 +9,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-
+/*
 public class MaintenanceOfficeTest {
     Room room = new Room(1,"Double",2,1500,false);
     @Test
@@ -78,4 +78,4 @@ public class MaintenanceOfficeTest {
         int requests = maintOff.getNumberRequestsInProgress();
         assertEquals(requests,2);
     }
-}
+}*/

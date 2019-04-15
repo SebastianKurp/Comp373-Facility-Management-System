@@ -5,7 +5,7 @@ import main.model.facility.Floor;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-
+/*
 public class BuildingTest {
 
     @Test
@@ -74,4 +74,4 @@ public class BuildingTest {
         facility.setBuildingNotes("Test");
         assertEquals(facility.buildingNotes,"Test");
     }
-}
+}*/

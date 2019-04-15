@@ -4,7 +4,7 @@ import main.model.maintenance.MaintenanceRequest;
 import main.model.maintenance.MaintenanceStaff;
 
 public interface MaintenanceOffice {
-    public void addStaff(int id, boolean onDuty, int currentTask);
+    public void addStaff(MaintenanceStaff staff);
     public MaintenanceStaff findMaintStaffById(int id);
     public void assignMaintStaff(MaintenanceRequest request, MaintenanceStaff staff);
 }
