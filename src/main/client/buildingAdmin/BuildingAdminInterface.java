@@ -1,9 +1,11 @@
 package main.client.buildingAdmin;
 
 import main.model.facility.MailRoom;
+import main.model.staff.StaffRegistry;
 import main.model.user.User;
 import main.model.user.UserRegistry;
 import main.model.facility.Room;
+import main.model.staff.Staff;
 
 public interface BuildingAdminInterface {
     //constructor method for most models
@@ -28,4 +30,8 @@ public interface BuildingAdminInterface {
     //methods for mail
     void findMailByReciepient(MailRoom mailRoom, User reciepient);
     void findMailByRoomNumber(MailRoom mailRoom, int roomNumber);
+
+    //methods for staff members
+    void addNewStaffMember(StaffRegistry staffList ,Staff newStaff);
+    void printStaffList(StaffRegistry staffList);
 }

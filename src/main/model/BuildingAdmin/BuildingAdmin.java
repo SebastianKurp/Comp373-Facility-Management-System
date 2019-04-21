@@ -7,6 +7,7 @@ import main.model.facility.MailRoom;
 import main.model.facility.Room;
 import main.model.maintenance.MaintenanceRequest;
 import main.model.maintenance.MaintenanceStaff;
+import main.model.staff.StaffRegistry;
 import main.model.user.User;
 import main.model.staff.Staff;
 import main.model.user.UserRegistry;
@@ -91,5 +92,14 @@ public class BuildingAdmin {
         return MaintenanceRequest(id, date, inProgress, notes, estimateCost, assignedId, room);
     }
 
+    //methods for staff
+    public StaffRegistry addNewStaffMember(StaffRegistry staffList ,Staff newStaff){
+        StaffRegistry sL = staffList.addNewStaffMember(newStaff);
+        return sL;
+    }
+
+    public StaffRegistry printStaffList(StaffRegistry staffList){
+        return staffList.printAllStaffList();
+    }
 }
 
