@@ -25,7 +25,6 @@ public class Demo {
         floor.setVacant(false);
         floor.setInRepair(false);
 
-
         Room room1 = (Room) context.getBean("room");
         room1.setFloor(floor);
         floor.addRoomToFloor(room1);
@@ -35,10 +34,6 @@ public class Demo {
         room1.setCapacity(1);
         room1.setType("studio");
         room1.setRoomNumber(10);
-
-        /*floor.addRoomToFloor(11,"double",2,1250.00,false);
-        floor.addRoomToFloor(12,"double",2,1250.00,false);
-        floor.addRoomToFloor(55,"double",2,1250,true);*/
 
         Floor floor1 = (Floor) context.getBean("floor");
         floor1.setFloorNumber(2);
@@ -58,7 +53,6 @@ public class Demo {
 
         //UserRegistry UserReg = new UserRegistry();
         //create falcity users
-
 
         Room room = (Room) context.getBean("room");
         room.setFloor(floor1);
@@ -81,11 +75,6 @@ public class Demo {
         room.printRoom();
         room2.printRoom();
 
-        /*
-        UserReg.addUser(1,room,"64023213123123","zeus@gmail.com", "Zeus");;
-        UserReg.addUser(2,room,"64023213123323","hades@gmail.com", "Hades");
-        UserReg.addUser(3,room2,"64023213123223","posedion@gmail.com", "Posedion");*/
-
         //create requests
         MaintOff maintOff = (MaintOff) context.getBean("maintOff");
         MaintenanceRequest maintenanceRequest = (MaintenanceRequest) context.getBean("maintenanceRequest");
@@ -95,9 +84,7 @@ public class Demo {
         maintenanceRequest.setRoom(room);
         maintenanceRequest.addRequest(maintenanceRequest);
 
-
         //check gets
-        
         maintOff.getAllLogs();
         maintOff.getNumberOfRequests();
         maintOff.getNumberRequestsInProgress();
@@ -105,8 +92,6 @@ public class Demo {
         maintOff.getSpecificLog(2);
         Room room5 = request.getRoom();
         room5.printRoom();
-
-
 
         //add staff
         MaintenanceStaff mstaff = (MaintenanceStaff) context.getBean("maintenanceStaff");
@@ -150,8 +135,7 @@ public class Demo {
         mail.setDateOfArrival("2/12/2020");
         mail.addMail(mail);
         mail.printAllMail();
-
-
+        
         //Observer Pattern with test in staffTest
         StaffRegistry staffRegistry = (StaffRegistry) context.getBean("staffRegistry");//observable
         Staff staff = (Staff) context.getBean("staff");//observer

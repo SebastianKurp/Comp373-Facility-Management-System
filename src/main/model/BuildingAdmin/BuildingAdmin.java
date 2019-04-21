@@ -81,11 +81,11 @@ public class BuildingAdmin {
         MailRoom m = mailRoom.findMailByreciepient(reciepient);
         return m;
     }
-
-    public MailRoom findMailByRoomNumber(MailRoom mailRoom, int roomNumber){
-        MailRoom m = mailRoom.findMailByRoomNumber(roomNumber);
-        return m;
-    }
+//
+//    public MailRoom findMailByRoomNumber(MailRoom mailRoom, int roomNumber){
+//        MailRoom m = mailRoom.findMailByRoomNumber(roomNumber);
+//        return m;
+//    }
 
     //methods for maintenance request
     public MaintenanceRequest MaintenanceRequest(int id, String date, boolean inProgress, String notes, int estimateCost, int assignedId, Room room){
@@ -93,13 +93,13 @@ public class BuildingAdmin {
     }
 
     //methods for staff
-    public StaffRegistry addNewStaffMember(StaffRegistry staffList ,Staff newStaff){
-        StaffRegistry sL = staffList.addNewStaffMember(newStaff);
-        return sL;
-    }
-
-    public StaffRegistry printStaffList(StaffRegistry staffList){
-        return staffList.printAllStaffList();
-    }
+//    public StaffRegistry addNewStaffMember(StaffRegistry staffList ,Staff newStaff){
+//        StaffRegistry sL = staffList.addNewStaffMember(newStaff);
+//        return sL;
+//    }
+//
+//    public StaffRegistry printStaffList(StaffRegistry staffList){
+//        return staffList.printAllStaffList();
+//    }
 }
 
