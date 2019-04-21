@@ -35,8 +35,16 @@ MaintenanceOffice.assignMainStaff(MaintenanceStaffMemberID, MaintenanceRequestId
 To even make things easier we added a admin interface which allows interaction with the staff, building, user, and maintenance interfaces. Below is the hierarchy of the interface, as shown the admin interface acts as a bridge between both the building and maintenance interfaces. Allowing for easier creation of a building which means easier duplication and less redundacy when add more falicites or buildings to the system.
 [![BridgePattern](https://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/bridge.png?raw=true)](Fhttps://github.com/SebastianKurp/Comp373-Facility-Management-System/blob/master/bridge.png?raw=true)
 
-
-
 ## Observer:
 ###### Problem Solved:
 Staff announcements created in the staff registry (observable) update each individual staff member's (observer) announcement when the announcement is changed. This allows the system to change the announcement in one place and have the changes applied throughout each staff member.
+
+## Facade:
+###### Problem solved:
+The issue of having to interact with multiple interfaces to add buildings, check users, and check maintenance.
+We solved this issue by creating interfaces throughout project which allows the operator to interact with concepts instead of individual objects.
+An example of this is in `BuildingInterface`, it allows the operator to interact with the entire facility instead of each individual model. 
+This allows the operator to add floors, edit rooms, change building, etc... within one interface, instead having to go through different interfaces.
+In addition we created a `BuildingAdminInterface`,which allows an admin user to access multiple concepts throughout the project without having to navigate through the various interfaces.
+For example the operator can create a new room/floor, check which User belongs to a room, access maintenance records, and see what mail is in the mail room.
+This allows an admin user to easily obtain information while still living the previous interfaces intact for other staff members to use.
