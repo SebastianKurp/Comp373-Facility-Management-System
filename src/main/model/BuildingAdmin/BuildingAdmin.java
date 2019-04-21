@@ -5,6 +5,8 @@ import main.model.facility.Building;
 import main.model.facility.Floor;
 import main.model.facility.MailRoom;
 import main.model.facility.Room;
+import main.model.maintenance.MaintenanceRequest;
+import main.model.maintenance.MaintenanceStaff;
 import main.model.user.User;
 import main.model.staff.Staff;
 import main.model.user.UserRegistry;
@@ -74,9 +76,20 @@ public class BuildingAdmin {
     }
 
     //methods for mailinterface
-//    public MailRoom findMailByReciepient(MailRoom mailRoom, User reciepient){
-//        MailRoom m = mailRoom.findMailByreciepient(reciepient);
-//        return m;
-//    }
+    public MailRoom findMailByReciepient(MailRoom mailRoom, User reciepient){
+        MailRoom m = mailRoom.findMailByreciepient(reciepient);
+        return m;
+    }
+
+    public MailRoom findMailByRoomNumber(MailRoom mailRoom, int roomNumber){
+        MailRoom m = mailRoom.findMailByRoomNumber(roomNumber);
+        return m;
+    }
+
+    //methods for maintenance request
+    public MaintenanceRequest MaintenanceRequest(int id, String date, boolean inProgress, String notes, int estimateCost, int assignedId, Room room){
+        return MaintenanceRequest(id, date, inProgress, notes, estimateCost, assignedId, room);
+    }
+
 }
 
