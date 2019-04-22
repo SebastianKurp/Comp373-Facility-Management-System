@@ -77,10 +77,10 @@ public class BuildingAdmin {
     }
 
     //methods for mailinterface
-    public MailRoom findMailByReciepient(MailRoom mailRoom, User reciepient){
-        MailRoom m = mailRoom.findMailByreciepient(reciepient);
-        return m;
-    }
+//    public MailRoom findMailByReciepient(MailRoom mailRoom, User reciepient){
+//        MailRoom m = mailRoom.findMailByreciepient(reciepient);
+//        return m;
+//    }
 //
 //    public MailRoom findMailByRoomNumber(MailRoom mailRoom, int roomNumber){
 //        MailRoom m = mailRoom.findMailByRoomNumber(roomNumber);

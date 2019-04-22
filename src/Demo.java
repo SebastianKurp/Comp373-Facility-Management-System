@@ -50,8 +50,7 @@ public class Demo {
         building.setBuildingNotes("Tester");
         building.addFloorToBuilding(floor);
         building.addFloorToBuilding(floor1);
-
-        //UserRegistry UserReg = new UserRegistry();
+        
         //create falcity users
 
         Room room = (Room) context.getBean("room");
@@ -135,7 +134,7 @@ public class Demo {
         mail.setDateOfArrival("2/12/2020");
         mail.addMail(mail);
         mail.printAllMail();
-        
+
         //Observer Pattern with test in staffTest
         StaffRegistry staffRegistry = (StaffRegistry) context.getBean("staffRegistry");//observable
         Staff staff = (Staff) context.getBean("staff");//observer
